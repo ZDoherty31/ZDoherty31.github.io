@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "project",
+    "title": "Zoe Doherty",
     "section": "",
-    "text": "This is a Quarto website.\nTo learn more about Quarto websites visit https://quarto.org/docs/websites."
+    "text": "Computer Science & Data Science · Lawrence University '26\n  \n    \n       GitHub\n    \n    \n       LinkedIn"
   },
   {
     "objectID": "about.html",
@@ -12,5 +12,19 @@
     "title": "About",
     "section": "",
     "text": "About this site"
+  },
+  {
+    "objectID": "index.html#about-me",
+    "href": "index.html#about-me",
+    "title": "Zoe Doherty",
+    "section": "About Me",
+    "text": "About Me\nHi, I’m Zoe! I am a student-athlete at Lawrence University graduating in June 2026 with a degree in Computer Science and a minor in Data Science — with departmental honors. I’m originally from Algonquin, Illinois.\nI’m passionate about sports analytics and love exploring the intersection of data and real-world decision-making. Whether I’m building a relational database, running a sentiment analysis, or finding patterns in a dataset, I enjoy turning raw data into meaningful stories.\nOutside of academics, you’ll find me on the softball field, out on a hiking trail, spending time with family and friends, or drawing."
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Zoe Doherty",
+    "section": "Education",
+    "text": "Education\nLawrence University · Appleton, WI\nB.A. Computer Science, Minor in Data Science · Class of June 2026\nGraduating with Departmental Honors"
   }
 ]
