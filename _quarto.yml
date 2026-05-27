@@ -8,9 +8,9 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: projects.qmd
+      - href: projects.html
         text: Projects
-      - href: interests.qmd
+      - href: interests.html
         text: Interests
     right:
       - icon: github
