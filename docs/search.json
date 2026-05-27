@@ -7,22 +7,22 @@
     "text": "About this site"
   },
   {
-    "objectID": "Projects.html",
-    "href": "Projects.html",
+    "objectID": "projects.html",
+    "href": "projects.html",
     "title": "Projects",
     "section": "",
     "text": "Welcome to my projects page! Here you will find work from my Advanced Data Computing course at Lawrence University, as well as projects I have pursued beyond the classroom."
   },
   {
-    "objectID": "Projects.html#class-projects-cmsc-405-advanced-data-science",
-    "href": "Projects.html#class-projects-cmsc-405-advanced-data-science",
+    "objectID": "projects.html#class-projects-cmsc-405-advanced-data-science",
+    "href": "projects.html#class-projects-cmsc-405-advanced-data-science",
     "title": "Projects",
     "section": "Class Projects — CMSC 405: Advanced Data Science",
     "text": "Class Projects — CMSC 405: Advanced Data Science\n\nProject 2: Movie Database Design & SQL Analysis\nTools: R, SQL, DuckDB, ggplot2\nTopics: Relational databases, SQL querying, data visualization\nA collaborative project in which we designed and populated a relational movie database using DuckDB, then wrote SQL queries to explore genre ratings, profitability, and movie popularity over time. Includes visualizations of trends from 1980–2016.\n\n\n\nProject 3: The Hidden Sentiment of Movie Critic Reviews\nTools: R, tidytext, ggridges, AFINN sentiment lexicon, ggplot2\nTopics: Text mining, sentiment analysis, TF-IDF, data visualization\nA text-mining deep dive into thousands of Rotten Tomatoes critic reviews. Using AFINN sentiment scoring, we uncovered how critics write differently across genres and how sentiment patterns have shifted across four decades and content ratings."
   },
   {
-    "objectID": "Projects.html#beyond-the-classroom",
-    "href": "Projects.html#beyond-the-classroom",
+    "objectID": "projects.html#beyond-the-classroom",
+    "href": "projects.html#beyond-the-classroom",
     "title": "Projects",
     "section": "Beyond the Classroom",
     "text": "Beyond the Classroom\n\nSports Analytics Project — Coming Soon\nCurrently in progress! Check back soon for details on this project.\n\nThis page is updated throughout the term as new projects are completed."
