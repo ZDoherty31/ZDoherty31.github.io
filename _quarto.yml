@@ -3,20 +3,25 @@ project:
   output-dir: docs
 
 website:
-  title: "project"
+  title: "Zoe Doherty"
   navbar:
     left:
       - href: index.qmd
         text: Home
-      - about.qmd
+      - href: projects.qmd
+        text: Projects
+      - href: interests.qmd
+        text: Interests
+    right:
+      - icon: github
+        href: https://github.com/ZDoherty31
+        aria-label: GitHub
+      - icon: linkedin
+        href: https://www.linkedin.com/in/zoe-doherty31
+        aria-label: LinkedIn
 
 format:
   html:
-    theme:
-      - cosmo
-      - brand
+    theme: cosmo
     css: styles.css
     toc: true
-
-
-
