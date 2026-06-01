@@ -12,9 +12,9 @@ website:
         text: Interests
       - text: Projects
         menu:
-          - href: project2.qmd
+          - href: project2.html
             text: SQL Project
-          - href: project3.qmd
+          - href: project3.html
             text: Text Analysis Project
     right:
       - icon: github
