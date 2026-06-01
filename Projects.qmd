@@ -9,7 +9,7 @@ Welcome to my projects page! Here you will find work from my Advanced Data Compu
 
 ------------------------------------------------------------------------
 
-## Class Projects — CMSC 405: Advanced Data Science
+## Class Projects — CMSC 405: Advanced Data Computing
 
 ### Project 2: Movie Database Design & SQL Analysis
 

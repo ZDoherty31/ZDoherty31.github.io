@@ -1,0 +1,478 @@
+---
+title: "Project 2"
+format: html
+author: "Group Members: Zoe & Owen"
+---
+
+```{r setup}
+#| message: false
+#| warning: false
+#| include: false
+
+library(ggplot2)
+library(tidyverse)
+library(mdsr)
+library(DBI)
+library(RMariaDB)
+library(dbplyr)
+library(duckdb)
+library(readr)
+```
+
+### ---------------------------------------------------------------------------
+# Accessing Data
+Data accessing done by Zoe
+
+```{r}
+# Read in the three movie datasets from CSV files
+
+# Dataset 1: Core movie info (genre, director, budget, gross, etc.)
+movies <- readr::read_csv("movies.csv")
+
+# Dataset 2: IMDb and Metascore ratings per movie
+ratings <- readr::read_csv("movie_ratings.csv")
+
+# Dataset 3: TMDB metadata (popularity, revenue, budget, release date)
+tmdb <- readr::read_csv("tmdb_5000_movies.csv")
+```
+
+### ---------------------------------------------------------------------------
+# Exploring the Data
+Exploration done by Zoe
+
+```{r}
+# Explore the movies dataset - check variable types, column names, and missing values
+glimpse(movies)
+summary(movies)
+```
+
+```{r}
+# Explore the ratings dataset
+glimpse(ratings)
+summary(ratings)
+```
+
+```{r}
+# Explore the tmdb dataset
+glimpse(tmdb)
+summary(tmdb)
+```
+
+### ---------------------------------------------------------------------------
+# Designing the Database
+Database design done together by Zoe and Owen
+
+```{r}
+# Create a new empty DuckDB database called movie_db
+# con is our connection object - we use it for all future SQL operations
+con <- DBI::dbConnect(duckdb::duckdb(), dbdir = "movie_db")
+```
+
+```{r}
+# Save each dataset as a CSV so we can load them using COPY FROM
+# This follows the proper SQL workflow for importing data
+write_csv(movies, "movies_clean.csv")
+write_csv(ratings, "ratings_clean.csv")
+write_csv(tmdb, "tmdb_clean.csv")
+```
+
+```{sql connection=con}
+DROP TABLE IF EXISTS movies;
+```
+
+```{sql connection=con}
+-- Create the movies table with explicit field types for each column
+-- VARCHAR for text fields, INTEGER for whole numbers, DOUBLE for decimals
+CREATE TABLE movies (
+  title       VARCHAR(255) NOT NULL DEFAULT '',
+  rating      VARCHAR(10) DEFAULT NULL,
+  genre       VARCHAR(50) DEFAULT NULL,
+  year        INTEGER DEFAULT NULL,
+  released    VARCHAR(50) DEFAULT NULL,
+  score       DOUBLE DEFAULT NULL,
+  votes       INTEGER DEFAULT NULL,
+  director    VARCHAR(255) DEFAULT NULL,
+  writer      VARCHAR(255) DEFAULT NULL,
+  star        VARCHAR(255) DEFAULT NULL,
+  country     VARCHAR(100) DEFAULT NULL,
+  budget      DOUBLE DEFAULT NULL,
+  gross       DOUBLE DEFAULT NULL,
+  company     VARCHAR(255) DEFAULT NULL,
+  runtime     DOUBLE DEFAULT NULL
+);
+```
+
+```{sql connection=con}
+COPY movies FROM 'movies_clean.csv' (FORMAT CSV, HEADER, NULL 'NA');
+```
+
+```{sql connection=con}
+DESCRIBE movies;
+```
+
+```{sql connection=con}
+SELECT * FROM movies LIMIT 10;
+```
+
+```{sql connection=con}
+DROP TABLE IF EXISTS movie_ratings;
+```
+
+```{sql connection=con}
+-- Create the movie_ratings table
+-- imdb and metascore are decimals, votes is a whole number
+CREATE TABLE movie_ratings (
+  title       VARCHAR(255) NOT NULL DEFAULT '',
+  year        INTEGER DEFAULT NULL,
+  imdb        DOUBLE DEFAULT NULL,
+  metascore   DOUBLE DEFAULT NULL,
+  votes       INTEGER DEFAULT NULL
+);
+```
+
+```{sql connection=con}
+COPY movie_ratings FROM 'ratings_clean.csv' (FORMAT CSV, HEADER, NULL 'NA');
+```
+
+```{sql connection=con}
+DESCRIBE movie_ratings;
+```
+
+```{sql connection=con}
+SELECT * FROM movie_ratings LIMIT 10;
+```
+
+```{sql connection=con}
+DROP TABLE IF EXISTS tmdb;
+```
+
+```{sql connection=con}
+-- Create the tmdb table
+-- release_date stored as VARCHAR since it comes in as a string from CSV
+-- budget and revenue are large numbers stored as DOUBLE
+CREATE TABLE tmdb (
+  title               VARCHAR(255) NOT NULL DEFAULT '',
+  year                INTEGER DEFAULT NULL,
+  budget              DOUBLE DEFAULT NULL,
+  revenue             DOUBLE DEFAULT NULL,
+  popularity          DOUBLE DEFAULT NULL,
+  vote_average        DOUBLE DEFAULT NULL,
+  vote_count          INTEGER DEFAULT NULL,
+  original_language   VARCHAR(10) DEFAULT NULL,
+  release_date        VARCHAR(20) DEFAULT NULL,
+  runtime             DOUBLE DEFAULT NULL,
+  status              VARCHAR(50) DEFAULT NULL
+);
+```
+
+```{sql connection=con}
+COPY tmdb FROM 'tmdb_clean.csv' (FORMAT CSV, HEADER, NULL 'NA');
+```
+
+```{sql connection=con}
+DESCRIBE tmdb;
+```
+
+```{sql connection=con}
+SELECT * FROM tmdb LIMIT 10;
+```
+
+```{sql connection=con}
+SHOW TABLES;
+```
+
+### ---------------------------------------------------------------------------
+# Querying Data Using SQL
+
+## Query 1 - Top 10 Most Profitable Movies
+Done by Zoe — Overall goal: Which movies and genres are the most successful?
+
+```{sql connection=con}
+-- Calculate profit as revenue minus budget
+-- Filter out rows where budget or revenue is missing (0)
+SELECT title,
+       year,
+       budget,
+       revenue,
+       revenue - budget AS profit
+FROM tmdb
+WHERE revenue > 0 AND budget > 0
+ORDER BY profit DESC
+LIMIT 10
+```
+
+## Query 2 - Average IMDb Rating and Metascore by Genre
+Done by Zoe
+
+```{sql connection=con}
+-- Join movies and movie_ratings on title and year to match films correctly
+-- Group by genre to get average ratings per genre
+SELECT m.genre,
+       ROUND(AVG(r.imdb), 2) AS avg_imdb,
+       ROUND(AVG(r.metascore), 2) AS avg_metascore,
+       COUNT(*) AS movie_count
+FROM movie_ratings r
+JOIN movies m ON r.title = m.title
+             AND r.year = m.year
+GROUP BY m.genre
+ORDER BY avg_imdb DESC
+```
+
+## Query 3 - Average Popularity and Revenue by Decade
+Done by Zoe
+
+```{sql connection=con}
+-- Group movies into decades using integer division (e.g., 1987 / 10 * 10 = 1980)
+-- Filter out rows with missing revenue
+SELECT (year / 10) * 10 AS decade,
+       ROUND(AVG(popularity), 2) AS avg_popularity,
+       ROUND(AVG(revenue), 2) AS avg_revenue,
+       COUNT(*) AS movie_count
+FROM tmdb
+WHERE year IS NOT NULL
+  AND revenue > 0
+GROUP BY decade
+ORDER BY decade
+```
+
+## Query 4 - Full 3-Table JOIN
+Done by Zoe
+
+```{sql connection=con}
+-- Join all three tables to combine genre/director info with ratings and TMDB metrics
+-- Filter to only movies with known budgets and revenues
+SELECT m.title,
+       m.genre,
+       m.director,
+       r.imdb,
+       r.metascore,
+       t.budget,
+       t.revenue,
+       t.popularity
+FROM movies m
+JOIN movie_ratings r ON r.title = m.title
+                    AND r.year = m.year
+JOIN tmdb t ON t.title = m.title
+           AND t.year = m.year
+WHERE t.budget > 0 AND t.revenue > 0
+ORDER BY t.popularity DESC
+LIMIT 20
+```
+
+## Owen's Queries - Movie Ratings and Genre Trends Over Time
+
+```{sql connection=con}
+-- Join tmdb and movies to combine release year, content rating, genre, and vote average
+-- Filter to only the four major content ratings for clarity
+CREATE OR REPLACE TABLE table1 AS
+SELECT EXTRACT(YEAR FROM CAST(release_date AS DATE)) AS year,
+       FLOOR(EXTRACT(YEAR FROM CAST(release_date AS DATE)) / 10) * 10 AS decade,
+       tmdb.title,
+       movies.rating,
+       movies.genre,
+       vote_average
+FROM tmdb
+JOIN movies ON tmdb.title = movies.title
+WHERE movies.rating IN ('R', 'PG', 'PG-13', 'G')
+ORDER BY year
+```
+
+```{sql connection=con}
+-- Count movies per year per rating and compute average votes
+-- Used ChatGPT assistance to figure out the CROSS JOIN and proportion logic
+CREATE OR REPLACE TABLE table2 AS
+WITH base AS (
+    SELECT year, rating,
+           COUNT(*) AS count,
+           AVG(vote_average) AS avg_votes
+    FROM table1
+    GROUP BY year, rating
+),
+years AS (SELECT DISTINCT year FROM table1),
+ratings AS (SELECT DISTINCT rating FROM table1),
+all_combos AS (
+    SELECT y.year, r.rating
+    FROM years y CROSS JOIN ratings r
+)
+SELECT a.year, a.rating,
+       COALESCE(b.count, 0) AS count,
+       COALESCE(b.count, 0) * 1.0
+           / SUM(COALESCE(b.count, 0)) OVER (PARTITION BY a.year) AS proportion,
+       b.avg_votes
+FROM all_combos a
+LEFT JOIN base b ON a.year = b.year AND a.rating = b.rating
+WHERE count != 0
+ORDER BY a.year
+```
+
+```{sql connection=con}
+-- Same structure as table2 but grouped by genre instead of rating
+CREATE OR REPLACE TABLE table3 AS
+WITH base AS (
+    SELECT year, genre,
+           COUNT(*) AS count,
+           AVG(vote_average) AS avg_votes
+    FROM table1
+    GROUP BY year, genre
+),
+years AS (SELECT DISTINCT year FROM table1),
+genres AS (SELECT DISTINCT genre FROM table1),
+all_combos AS (
+    SELECT y.year, g.genre
+    FROM years y CROSS JOIN genres g
+)
+SELECT a.year, a.genre,
+       COALESCE(b.count, 0) AS count,
+       COALESCE(b.count, 0) * 1.0
+           / SUM(COALESCE(b.count, 0)) OVER (PARTITION BY a.year) AS proportion,
+       b.avg_votes
+FROM all_combos a
+LEFT JOIN base b ON a.year = b.year AND a.genre = b.genre
+WHERE count != 0
+ORDER BY a.year
+```
+
+```{sql connection=con}
+-- Combine table2 and table3 into a single summary table for visualization
+CREATE OR REPLACE TABLE table4 AS
+SELECT table2.year,
+       table2.rating,
+       table2.proportion AS rating_prop,
+       table3.genre,
+       table3.proportion AS genre_prop,
+       AVG(table2.avg_votes) AS avg_votes
+FROM table2
+JOIN table3 ON table2.year = table3.year
+GROUP BY table2.year, table2.rating, rating_prop, table3.genre, genre_prop
+```
+
+### ---------------------------------------------------------------------------
+# Creating Data Visualizations
+
+## Visualization 1 - Average IMDb Rating by Genre
+Done by Zoe
+
+```{r}
+# Pull the genre ratings summary from the database into R for plotting
+genre_ratings <- dbGetQuery(con, "
+  SELECT m.genre,
+         ROUND(AVG(r.imdb), 2) AS avg_imdb,
+         COUNT(*) AS movie_count
+  FROM movie_ratings r
+  JOIN movies m ON r.title = m.title
+               AND r.year = m.year
+  GROUP BY m.genre
+  ORDER BY avg_imdb DESC
+")
+```
+
+```{r}
+# Bar chart of average IMDb rating by genre
+# reorder() sorts genres from lowest to highest avg_imdb for readability
+# coord_flip() makes genre labels horizontal and easier to read
+# scale_fill_gradient applies a blue color gradient - darker = higher rating
+ggplot(genre_ratings, aes(x = reorder(genre, avg_imdb), y = avg_imdb, fill = avg_imdb)) +
+  geom_col() +
+  coord_flip() +
+  scale_fill_gradient(low = "lightblue", high = "darkblue") +
+  labs(
+    title = "Average IMDb Rating by Genre",
+    subtitle = "Based on movies appearing in both datasets",
+    x = "Genre",
+    y = "Average IMDb Rating",
+    fill = "Avg Rating"
+  ) +
+  theme_minimal()
+```
+
+## Visualizations 2, 3, 4 - Movie Trends Over Time (1980-2016)
+Done by Owen
+
+```{r}
+# Pull table1 and table4 from the database into R for plotting
+table1 <- DBI::dbGetQuery(con, "SELECT * FROM table1")
+table4 <- DBI::dbGetQuery(con, "SELECT * FROM table4")
+
+# Filter to only include movies from 1980 onwards
+revised_table1 <- table1 |> filter(year >= 1980)
+revised_table4 <- table4 |> filter(year >= 1980)
+
+# Compute the average IMDb vote score per year across all movies
+avg_votes_by_year <- revised_table1 |>
+  group_by(year) |>
+  summarise(avg_votes = mean(vote_average, na.rm = TRUE))
+```
+
+```{r}
+# Line + point plot of average IMDb vote score by year
+# The peach background (FFE5B4) is a consistent theme across Owen's visuals
+ggplot(avg_votes_by_year, aes(x = year, y = avg_votes)) +
+  geom_point(size = 3) +
+  geom_line() +
+  labs(x = "Year", y = "Average IMDB Votes",
+       title = "Movie Popularity over Time (1980-2016)") +
+  theme_bw() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 12),
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(face = "bold"),
+    legend.background = element_rect(fill = "white", color = "black"),
+    panel.border = element_rect(color = "black", fill = NA, linewidth = 1),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "#FFE5B4", color = NA)
+  )
+```
+
+```{r}
+# Stacked bar chart showing movies of each content rating released per year
+ggplot(revised_table1, aes(x = year, fill = rating)) +
+  geom_bar() +
+  labs(x = "Year", y = "Count", fill = "Rating",
+       title = "The Surge of Movie Rating Frequencies (1980-2016)") +
+  theme_bw() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 12),
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(face = "bold"),
+    legend.background = element_rect(fill = "white", color = "black"),
+    panel.border = element_rect(color = "black", fill = NA, linewidth = 1),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "#FFE5B4", color = NA)
+  )
+```
+
+```{r}
+# Line chart showing the proportion of each genre per year
+# Used ChatGPT assistance for theme and visual styling ideas
+ggplot(revised_table4, aes(x = year, y = genre_prop, color = genre)) +
+  geom_line() +
+  labs(x = "Year", y = "Proportion", color = "Genre",
+       title = "The Shift in Movie Genre Proportion (1980-2016)") +
+  theme_bw() +
+  theme(
+    plot.title = element_text(hjust = 0.5, face = "bold", size = 12),
+    axis.title = element_text(face = "bold"),
+    axis.text = element_text(size = 10),
+    legend.title = element_text(face = "bold"),
+    legend.background = element_rect(fill = "white", color = "black"),
+    panel.border = element_rect(color = "black", fill = NA, linewidth = 1),
+    panel.grid.minor = element_blank(),
+    plot.background = element_rect(fill = "#FFE5B4", color = NA)
+  )
+```
+
+### ---------------------------------------------------------------------------
+# Sources
+
+* https://www.kaggle.com/datasets/danielgrijalvas/movies
+* https://www.kaggle.com/datasets/raidevesh05/movie-ratings-dataset
+* https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+
+### ---------------------------------------------------------------------------
+
+```{r}
+# Always disconnect from the database when done to free up resources
+DBI::dbDisconnect(con, shutdown = TRUE)
+```
