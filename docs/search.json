@@ -28,6 +28,48 @@
     "text": "Education\nLawrence University · Appleton, WI\nB.A. Computer Science, Minor in Data Science · Class of June 2026\nGraduating with Departmental Honors"
   },
   {
+    "objectID": "project4.html",
+    "href": "project4.html",
+    "title": "Project 4: numhelpr R Package",
+    "section": "",
+    "text": "numhelpr is an R package I built that provides simple helper functions for common number formatting and math tasks that can be tedious or unintuitive to do in base R. The package is installable directly from GitHub and includes three functions and a built-in practice dataset.\nYou can view the full package documentation at adc-405-s26.github.io/numhelpr and the source code at github.com/ADC-405-S26/numhelpr."
+  },
+  {
+    "objectID": "project4.html#overview",
+    "href": "project4.html#overview",
+    "title": "Project 4: numhelpr R Package",
+    "section": "",
+    "text": "numhelpr is an R package I built that provides simple helper functions for common number formatting and math tasks that can be tedious or unintuitive to do in base R. The package is installable directly from GitHub and includes three functions and a built-in practice dataset.\nYou can view the full package documentation at adc-405-s26.github.io/numhelpr and the source code at github.com/ADC-405-S26/numhelpr."
+  },
+  {
+    "objectID": "project4.html#installation",
+    "href": "project4.html#installation",
+    "title": "Project 4: numhelpr R Package",
+    "section": "Installation",
+    "text": "Installation\n\n# Install the development version from GitHub\nremotes::install_github(\"ADC-405-S26/numhelpr\")"
+  },
+  {
+    "objectID": "project4.html#functions",
+    "href": "project4.html#functions",
+    "title": "Project 4: numhelpr R Package",
+    "section": "Functions",
+    "text": "Functions\n\npercent()\nConverts a decimal value into a formatted percentage string — something that is surprisingly annoying to do cleanly in base R.\n\nlibrary(numhelpr)\n\n# Single value\npercent(0.753)\n\n# Works on vectors too\npercent(c(0.1, 0.25, 0.873))\n\n\n\n\npercent_change()\nCalculates the percentage change between two values. Useful for quickly computing growth rates or differences without writing the formula manually every time.\n\n# Single pair of values\npercent_change(10, 12.5)\n\n# Works on vectors too\npercent_change(c(10, 25, 5), c(12.5, 22, 5.75))\n\n\n\n\nclamp()\nRestricts numeric values to a specified range. Useful when you need to cap or floor values in a dataset without writing custom logic.\n\nclamp(c(1, 5, 10, 15, 20), lower = 5, upper = 15)"
+  },
+  {
+    "objectID": "project4.html#data",
+    "href": "project4.html#data",
+    "title": "Project 4: numhelpr R Package",
+    "section": "Data",
+    "text": "Data\nThe package includes a built-in dataset sales_data that can be used to practice the functions in a realistic context.\n\nsales_data"
+  },
+  {
+    "objectID": "project4.html#sources",
+    "href": "project4.html#sources",
+    "title": "Project 4: numhelpr R Package",
+    "section": "Sources",
+    "text": "Sources\n\nPackage Documentation\nGitHub Repository"
+  },
+  {
     "objectID": "project2.html#query-1---top-10-most-profitable-movies",
     "href": "project2.html#query-1---top-10-most-profitable-movies",
     "title": "Project 2",

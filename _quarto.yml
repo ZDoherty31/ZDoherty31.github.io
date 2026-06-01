@@ -16,6 +16,8 @@ website:
             text: SQL Project
           - href: project3.html
             text: Text Analysis Project
+          - href: project4.html
+            text: R Package
     right:
       - icon: github
         href: https://github.com/ZDoherty31

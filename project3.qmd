@@ -6,6 +6,7 @@ author: "Group Members: Zoe & Owen"
 
 ```{r}
 #| include: false
+#| eval: false
 
 # Install necessary packages
 # install.packages("ggridges")

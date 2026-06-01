@@ -1,0 +1,89 @@
+---
+title: "Project 4: numhelpr R Package"
+format: html
+author: "Zoe Doherty"
+---
+
+## Overview
+
+`numhelpr` is an R package I built that provides simple helper functions for common number formatting and math tasks that can be tedious or unintuitive to do in base R. The package is installable directly from GitHub and includes three functions and a built-in practice dataset.
+
+You can view the full package documentation at [adc-405-s26.github.io/numhelpr](https://adc-405-s26.github.io/numhelpr/) and the source code at [github.com/ADC-405-S26/numhelpr](https://github.com/ADC-405-S26/numhelpr).
+
+------------------------------------------------------------------------
+
+## Installation
+
+```{r}
+#| eval: false
+
+# Install the development version from GitHub
+remotes::install_github("ADC-405-S26/numhelpr")
+```
+
+------------------------------------------------------------------------
+
+## Functions
+
+### `percent()`
+
+Converts a decimal value into a formatted percentage string — something that is surprisingly annoying to do cleanly in base R.
+
+```{r}
+#| eval: false
+
+library(numhelpr)
+
+# Single value
+percent(0.753)
+
+# Works on vectors too
+percent(c(0.1, 0.25, 0.873))
+```
+
+------------------------------------------------------------------------
+
+### `percent_change()`
+
+Calculates the percentage change between two values. Useful for quickly computing growth rates or differences without writing the formula manually every time.
+
+```{r}
+#| eval: false
+
+# Single pair of values
+percent_change(10, 12.5)
+
+# Works on vectors too
+percent_change(c(10, 25, 5), c(12.5, 22, 5.75))
+```
+
+------------------------------------------------------------------------
+
+### `clamp()`
+
+Restricts numeric values to a specified range. Useful when you need to cap or floor values in a dataset without writing custom logic.
+
+```{r}
+#| eval: false
+
+clamp(c(1, 5, 10, 15, 20), lower = 5, upper = 15)
+```
+
+------------------------------------------------------------------------
+
+## Data
+
+The package includes a built-in dataset `sales_data` that can be used to practice the functions in a realistic context.
+
+```{r}
+#| eval: false
+
+sales_data
+```
+
+------------------------------------------------------------------------
+
+## Sources
+
+-   [Package Documentation](https://adc-405-s26.github.io/numhelpr/)
+-   [GitHub Repository](https://github.com/ADC-405-S26/numhelpr)
