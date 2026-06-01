@@ -20,7 +20,9 @@ library(readr)
 ```
 
 ### ---------------------------------------------------------------------------
+
 # Accessing Data
+
 Data accessing done by Zoe
 
 ```{r}
@@ -37,7 +39,9 @@ tmdb <- readr::read_csv("tmdb_5000_movies.csv")
 ```
 
 ### ---------------------------------------------------------------------------
+
 # Exploring the Data
+
 Exploration done by Zoe
 
 ```{r}
@@ -59,7 +63,9 @@ summary(tmdb)
 ```
 
 ### ---------------------------------------------------------------------------
+
 # Designing the Database
+
 Database design done together by Zoe and Owen
 
 ```{r}
@@ -103,7 +109,7 @@ CREATE TABLE movies (
 ```
 
 ```{sql connection=con}
-COPY movies FROM 'movies_clean.csv' (FORMAT CSV, HEADER, NULL 'NA');
+COPY movies FROM 'movies_clean.csv' (FORMAT CSV, HEADER, NULL 'NA', QUOTE '"', ESCAPE '"');
 ```
 
 ```{sql connection=con}
@@ -122,6 +128,7 @@ DROP TABLE IF EXISTS movie_ratings;
 -- Create the movie_ratings table
 -- imdb and metascore are decimals, votes is a whole number
 CREATE TABLE movie_ratings (
+  idx         INTEGER DEFAULT NULL,
   title       VARCHAR(255) NOT NULL DEFAULT '',
   year        INTEGER DEFAULT NULL,
   imdb        DOUBLE DEFAULT NULL,
@@ -147,26 +154,21 @@ DROP TABLE IF EXISTS tmdb;
 ```
 
 ```{sql connection=con}
--- Create the tmdb table
--- release_date stored as VARCHAR since it comes in as a string from CSV
--- budget and revenue are large numbers stored as DOUBLE
-CREATE TABLE tmdb (
-  title               VARCHAR(255) NOT NULL DEFAULT '',
-  year                INTEGER DEFAULT NULL,
-  budget              DOUBLE DEFAULT NULL,
-  revenue             DOUBLE DEFAULT NULL,
-  popularity          DOUBLE DEFAULT NULL,
-  vote_average        DOUBLE DEFAULT NULL,
-  vote_count          INTEGER DEFAULT NULL,
-  original_language   VARCHAR(10) DEFAULT NULL,
-  release_date        VARCHAR(20) DEFAULT NULL,
-  runtime             DOUBLE DEFAULT NULL,
-  status              VARCHAR(50) DEFAULT NULL
-);
-```
-
-```{sql connection=con}
-COPY tmdb FROM 'tmdb_clean.csv' (FORMAT CSV, HEADER, NULL 'NA');
+-- Load the full tmdb CSV directly, then select only the columns we need
+-- The tmdb dataset has 20 columns; we extract the relevant ones for analysis
+CREATE TABLE tmdb AS
+SELECT title,
+       CAST(release_date AS DATE) AS release_date,
+       CAST(YEAR(CAST(release_date AS DATE)) AS INTEGER) AS year,
+       CAST(budget AS DOUBLE) AS budget,
+       CAST(revenue AS DOUBLE) AS revenue,
+       CAST(popularity AS DOUBLE) AS popularity,
+       CAST(vote_average AS DOUBLE) AS vote_average,
+       CAST(vote_count AS INTEGER) AS vote_count,
+       original_language,
+       CAST(runtime AS DOUBLE) AS runtime,
+       status
+FROM read_csv_auto('tmdb_5000_movies.csv');
 ```
 
 ```{sql connection=con}
@@ -182,9 +184,11 @@ SHOW TABLES;
 ```
 
 ### ---------------------------------------------------------------------------
+
 # Querying Data Using SQL
 
 ## Query 1 - Top 10 Most Profitable Movies
+
 Done by Zoe — Overall goal: Which movies and genres are the most successful?
 
 ```{sql connection=con}
@@ -202,6 +206,7 @@ LIMIT 10
 ```
 
 ## Query 2 - Average IMDb Rating and Metascore by Genre
+
 Done by Zoe
 
 ```{sql connection=con}
@@ -219,6 +224,7 @@ ORDER BY avg_imdb DESC
 ```
 
 ## Query 3 - Average Popularity and Revenue by Decade
+
 Done by Zoe
 
 ```{sql connection=con}
@@ -236,6 +242,7 @@ ORDER BY decade
 ```
 
 ## Query 4 - Full 3-Table JOIN
+
 Done by Zoe
 
 ```{sql connection=con}
@@ -347,9 +354,11 @@ GROUP BY table2.year, table2.rating, rating_prop, table3.genre, genre_prop
 ```
 
 ### ---------------------------------------------------------------------------
+
 # Creating Data Visualizations
 
 ## Visualization 1 - Average IMDb Rating by Genre
+
 Done by Zoe
 
 ```{r}
@@ -386,6 +395,7 @@ ggplot(genre_ratings, aes(x = reorder(genre, avg_imdb), y = avg_imdb, fill = avg
 ```
 
 ## Visualizations 2, 3, 4 - Movie Trends Over Time (1980-2016)
+
 Done by Owen
 
 ```{r}
@@ -464,11 +474,12 @@ ggplot(revised_table4, aes(x = year, y = genre_prop, color = genre)) +
 ```
 
 ### ---------------------------------------------------------------------------
+
 # Sources
 
-* https://www.kaggle.com/datasets/danielgrijalvas/movies
-* https://www.kaggle.com/datasets/raidevesh05/movie-ratings-dataset
-* https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata
+-   <https://www.kaggle.com/datasets/danielgrijalvas/movies>
+-   <https://www.kaggle.com/datasets/raidevesh05/movie-ratings-dataset>
+-   <https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata>
 
 ### ---------------------------------------------------------------------------
 

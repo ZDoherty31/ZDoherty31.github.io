@@ -1,0 +1,2440 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.8.27">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Group Members: Zoe &amp; Owen">
+
+<title>Project 2 – Zoe Doherty</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/axe/axe-check.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-c82218b12ac0f327fa8bd7d074ce2147.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">Zoe Doherty</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./interests.qmd"> 
+<span class="menu-text">Interests</span></a>
+  </li>  
+  <li class="nav-item dropdown ">
+    <a class="nav-link dropdown-toggle" href="#" id="nav-menu-projects" role="link" data-bs-toggle="dropdown" aria-expanded="false">
+ <span class="menu-text">Projects</span>
+    </a>
+    <ul class="dropdown-menu" aria-labelledby="nav-menu-projects">    
+        <li>
+    <a class="dropdown-item" href="./project2.qmd">
+ <span class="dropdown-text">SQL Project</span></a>
+  </li>  
+        <li>
+    <a class="dropdown-item" href="./project3.qmd">
+ <span class="dropdown-text">Text Analysis Project</span></a>
+  </li>  
+    </ul>
+  </li>
+</ul>
+            <ul class="navbar-nav navbar-nav-scroll ms-auto">
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://github.com/ZDoherty31"> <i class="bi bi-github" role="img" aria-label="GitHub">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://www.linkedin.com/in/zoe-doherty31"> <i class="bi bi-linkedin" role="img" aria-label="LinkedIn">
+</i> 
+<span class="menu-text"></span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section">—————————————————————————</a></li>
+  <li><a href="#accessing-data" id="toc-accessing-data" class="nav-link" data-scroll-target="#accessing-data">Accessing Data</a>
+  <ul class="collapse">
+  <li><a href="#section-1" id="toc-section-1" class="nav-link" data-scroll-target="#section-1">—————————————————————————</a></li>
+  </ul></li>
+  <li><a href="#exploring-the-data" id="toc-exploring-the-data" class="nav-link" data-scroll-target="#exploring-the-data">Exploring the Data</a>
+  <ul class="collapse">
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">—————————————————————————</a></li>
+  </ul></li>
+  <li><a href="#designing-the-database" id="toc-designing-the-database" class="nav-link" data-scroll-target="#designing-the-database">Designing the Database</a>
+  <ul class="collapse">
+  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">—————————————————————————</a></li>
+  </ul></li>
+  <li><a href="#querying-data-using-sql" id="toc-querying-data-using-sql" class="nav-link" data-scroll-target="#querying-data-using-sql">Querying Data Using SQL</a>
+  <ul class="collapse">
+  <li><a href="#query-1---top-10-most-profitable-movies" id="toc-query-1---top-10-most-profitable-movies" class="nav-link" data-scroll-target="#query-1---top-10-most-profitable-movies">Query 1 - Top 10 Most Profitable Movies</a></li>
+  <li><a href="#query-2---average-imdb-rating-and-metascore-by-genre" id="toc-query-2---average-imdb-rating-and-metascore-by-genre" class="nav-link" data-scroll-target="#query-2---average-imdb-rating-and-metascore-by-genre">Query 2 - Average IMDb Rating and Metascore by Genre</a></li>
+  <li><a href="#query-3---average-popularity-and-revenue-by-decade" id="toc-query-3---average-popularity-and-revenue-by-decade" class="nav-link" data-scroll-target="#query-3---average-popularity-and-revenue-by-decade">Query 3 - Average Popularity and Revenue by Decade</a></li>
+  <li><a href="#query-4---full-3-table-join" id="toc-query-4---full-3-table-join" class="nav-link" data-scroll-target="#query-4---full-3-table-join">Query 4 - Full 3-Table JOIN</a></li>
+  <li><a href="#owens-queries---movie-ratings-and-genre-trends-over-time" id="toc-owens-queries---movie-ratings-and-genre-trends-over-time" class="nav-link" data-scroll-target="#owens-queries---movie-ratings-and-genre-trends-over-time">Owen’s Queries - Movie Ratings and Genre Trends Over Time</a>
+  <ul class="collapse">
+  <li><a href="#section-4" id="toc-section-4" class="nav-link" data-scroll-target="#section-4">—————————————————————————</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#creating-data-visualizations" id="toc-creating-data-visualizations" class="nav-link" data-scroll-target="#creating-data-visualizations">Creating Data Visualizations</a>
+  <ul class="collapse">
+  <li><a href="#visualization-1---average-imdb-rating-by-genre" id="toc-visualization-1---average-imdb-rating-by-genre" class="nav-link" data-scroll-target="#visualization-1---average-imdb-rating-by-genre">Visualization 1 - Average IMDb Rating by Genre</a></li>
+  <li><a href="#visualizations-2-3-4---movie-trends-over-time-1980-2016" id="toc-visualizations-2-3-4---movie-trends-over-time-1980-2016" class="nav-link" data-scroll-target="#visualizations-2-3-4---movie-trends-over-time-1980-2016">Visualizations 2, 3, 4 - Movie Trends Over Time (1980-2016)</a>
+  <ul class="collapse">
+  <li><a href="#section-5" id="toc-section-5" class="nav-link" data-scroll-target="#section-5">—————————————————————————</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#sources" id="toc-sources" class="nav-link" data-scroll-target="#sources">Sources</a>
+  <ul class="collapse">
+  <li><a href="#section-6" id="toc-section-6" class="nav-link" data-scroll-target="#section-6">—————————————————————————</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Project 2</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Group Members: Zoe &amp; Owen </p>
+          </div>
+  </div>
+    
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="section" class="level3">
+<h3 class="anchored" data-anchor-id="section">—————————————————————————</h3>
+</section>
+<section id="accessing-data" class="level1">
+<h1>Accessing Data</h1>
+<p>Data accessing done by Zoe</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Read in the three movie datasets from CSV files</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Dataset 1: Core movie info (genre, director, budget, gross, etc.)</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>movies <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"movies.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 7668 Columns: 15
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr (9): name, rating, genre, released, director, writer, star, country, com...
+dbl (6): year, score, votes, budget, gross, runtime
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dataset 2: IMDb and Metascore ratings per movie</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>ratings <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"movie_ratings.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>New names:
+Rows: 1800 Columns: 6
+── Column specification
+──────────────────────────────────────────────────────── Delimiter: "," chr
+(1): movie dbl (5): ...1, year, imdb, metascore, votes
+ℹ Use `spec()` to retrieve the full column specification for this data. ℹ
+Specify the column types or set `show_col_types = FALSE` to quiet this message.
+• `` -&gt; `...1`</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Dataset 3: TMDB metadata (popularity, revenue, budget, release date)</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>tmdb <span class="ot">&lt;-</span> readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"tmdb_5000_movies.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Rows: 4803 Columns: 20
+── Column specification ────────────────────────────────────────────────────────
+Delimiter: ","
+chr  (12): genres, homepage, keywords, original_language, original_title, ov...
+dbl   (7): budget, id, popularity, revenue, runtime, vote_average, vote_count
+date  (1): release_date
+
+ℹ Use `spec()` to retrieve the full column specification for this data.
+ℹ Specify the column types or set `show_col_types = FALSE` to quiet this message.</code></pre>
+</div>
+</div>
+<section id="section-1" class="level3">
+<h3 class="anchored" data-anchor-id="section-1">—————————————————————————</h3>
+</section>
+</section>
+<section id="exploring-the-data" class="level1">
+<h1>Exploring the Data</h1>
+<p>Exploration done by Zoe</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Explore the movies dataset - check variable types, column names, and missing values</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(movies)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 7,668
+Columns: 15
+$ name     &lt;chr&gt; "The Shining", "The Blue Lagoon", "Star Wars: Episode V - The…
+$ rating   &lt;chr&gt; "R", "R", "PG", "PG", "R", "R", "R", "R", "PG", "R", "PG", "P…
+$ genre    &lt;chr&gt; "Drama", "Adventure", "Action", "Comedy", "Comedy", "Horror",…
+$ year     &lt;dbl&gt; 1980, 1980, 1980, 1980, 1980, 1980, 1980, 1980, 1980, 1980, 1…
+$ released &lt;chr&gt; "June 13, 1980 (United States)", "July 2, 1980 (United States…
+$ score    &lt;dbl&gt; 8.4, 5.8, 8.7, 7.7, 7.3, 6.4, 7.9, 8.2, 6.8, 7.0, 6.1, 7.3, 5…
+$ votes    &lt;dbl&gt; 927000, 65000, 1200000, 221000, 108000, 123000, 188000, 33000…
+$ director &lt;chr&gt; "Stanley Kubrick", "Randal Kleiser", "Irvin Kershner", "Jim A…
+$ writer   &lt;chr&gt; "Stephen King", "Henry De Vere Stacpoole", "Leigh Brackett", …
+$ star     &lt;chr&gt; "Jack Nicholson", "Brooke Shields", "Mark Hamill", "Robert Ha…
+$ country  &lt;chr&gt; "United Kingdom", "United States", "United States", "United S…
+$ budget   &lt;dbl&gt; 1.9e+07, 4.5e+06, 1.8e+07, 3.5e+06, 6.0e+06, 5.5e+05, 2.7e+07…
+$ gross    &lt;dbl&gt; 46998772, 58853106, 538375067, 83453539, 39846344, 39754601, …
+$ company  &lt;chr&gt; "Warner Bros.", "Columbia Pictures", "Lucasfilm", "Paramount …
+$ runtime  &lt;dbl&gt; 146, 104, 124, 88, 98, 95, 133, 129, 127, 100, 116, 109, 114,…</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(movies)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     name              rating             genre                year     
+ Length:7668        Length:7668        Length:7668        Min.   :1980  
+ Class :character   Class :character   Class :character   1st Qu.:1991  
+ Mode  :character   Mode  :character   Mode  :character   Median :2000  
+                                                          Mean   :2000  
+                                                          3rd Qu.:2010  
+                                                          Max.   :2020  
+                                                                        
+   released             score          votes           director        
+ Length:7668        Min.   :1.90   Min.   :      7   Length:7668       
+ Class :character   1st Qu.:5.80   1st Qu.:   9100   Class :character  
+ Mode  :character   Median :6.50   Median :  33000   Mode  :character  
+                    Mean   :6.39   Mean   :  88108                     
+                    3rd Qu.:7.10   3rd Qu.:  93000                     
+                    Max.   :9.30   Max.   :2400000                     
+                    NA's   :3      NA's   :3                           
+    writer              star             country              budget         
+ Length:7668        Length:7668        Length:7668        Min.   :     3000  
+ Class :character   Class :character   Class :character   1st Qu.: 10000000  
+ Mode  :character   Mode  :character   Mode  :character   Median : 20500000  
+                                                          Mean   : 35589876  
+                                                          3rd Qu.: 45000000  
+                                                          Max.   :356000000  
+                                                          NA's   :2171       
+     gross             company             runtime     
+ Min.   :3.090e+02   Length:7668        Min.   : 55.0  
+ 1st Qu.:4.532e+06   Class :character   1st Qu.: 95.0  
+ Median :2.021e+07   Mode  :character   Median :104.0  
+ Mean   :7.850e+07                      Mean   :107.3  
+ 3rd Qu.:7.602e+07                      3rd Qu.:116.0  
+ Max.   :2.847e+09                      Max.   :366.0  
+ NA's   :189                            NA's   :4      </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Explore the ratings dataset</span></span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(ratings)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 1,800
+Columns: 6
+$ ...1      &lt;dbl&gt; 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17…
+$ movie     &lt;chr&gt; "Gladiator", "Memento", "Snatch", "Requiem for a Dream", "X-…
+$ year      &lt;dbl&gt; 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, 2000, …
+$ imdb      &lt;dbl&gt; 8.5, 8.5, 8.3, 8.3, 7.4, 7.8, 7.6, 7.3, 7.0, 6.1, 7.8, 6.5, …
+$ metascore &lt;dbl&gt; 67, 80, NA, 68, 64, 73, 64, 62, 73, NA, 69, NA, 93, 63, 90, …
+$ votes     &lt;dbl&gt; 1187559, 1014199, 707162, 688394, 526411, 465125, 422475, 33…</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(ratings)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>      ...1           movie                year           imdb      
+ Min.   :   0.0   Length:1800        Min.   :2000   Min.   :4.100  
+ 1st Qu.: 449.8   Class :character   1st Qu.:2004   1st Qu.:6.700  
+ Median : 899.5   Mode  :character   Median :2008   Median :7.300  
+ Mean   : 899.5                      Mean   :2008   Mean   :7.239  
+ 3rd Qu.:1349.2                      3rd Qu.:2013   3rd Qu.:7.800  
+ Max.   :1799.0                      Max.   :2017   Max.   :9.900  
+                                                                   
+   metascore          votes        
+ Min.   : 61.00   Min.   :  93428  
+ 1st Qu.: 67.00   1st Qu.: 184222  
+ Median : 73.00   Median : 246739  
+ Mean   : 74.28   Mean   : 317636  
+ 3rd Qu.: 81.00   3rd Qu.: 382583  
+ Max.   :100.00   Max.   :2020298  
+ NA's   :850                       </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Explore the tmdb dataset</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(tmdb)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 4,803
+Columns: 20
+$ budget               &lt;dbl&gt; 2.37e+08, 3.00e+08, 2.45e+08, 2.50e+08, 2.60e+08,…
+$ genres               &lt;chr&gt; "[{\"id\": 28, \"name\": \"Action\"}, {\"id\": 12…
+$ homepage             &lt;chr&gt; "http://www.avatarmovie.com/", "http://disney.go.…
+$ id                   &lt;dbl&gt; 19995, 285, 206647, 49026, 49529, 559, 38757, 998…
+$ keywords             &lt;chr&gt; "[{\"id\": 1463, \"name\": \"culture clash\"}, {\…
+$ original_language    &lt;chr&gt; "en", "en", "en", "en", "en", "en", "en", "en", "…
+$ original_title       &lt;chr&gt; "Avatar", "Pirates of the Caribbean: At World's E…
+$ overview             &lt;chr&gt; "In the 22nd century, a paraplegic Marine is disp…
+$ popularity           &lt;dbl&gt; 150.43758, 139.08262, 107.37679, 112.31295, 43.92…
+$ production_companies &lt;chr&gt; "[{\"name\": \"Ingenious Film Partners\", \"id\":…
+$ production_countries &lt;chr&gt; "[{\"iso_3166_1\": \"US\", \"name\": \"United Sta…
+$ release_date         &lt;date&gt; 2009-12-10, 2007-05-19, 2015-10-26, 2012-07-16, …
+$ revenue              &lt;dbl&gt; 2787965087, 961000000, 880674609, 1084939099, 284…
+$ runtime              &lt;dbl&gt; 162, 169, 148, 165, 132, 139, 100, 141, 153, 151,…
+$ spoken_languages     &lt;chr&gt; "[{\"iso_639_1\": \"en\", \"name\": \"English\"},…
+$ status               &lt;chr&gt; "Released", "Released", "Released", "Released", "…
+$ tagline              &lt;chr&gt; "Enter the World of Pandora.", "At the end of the…
+$ title                &lt;chr&gt; "Avatar", "Pirates of the Caribbean: At World's E…
+$ vote_average         &lt;dbl&gt; 7.2, 6.9, 6.3, 7.6, 6.1, 5.9, 7.4, 7.3, 7.4, 5.7,…
+$ vote_count           &lt;dbl&gt; 11800, 4500, 4466, 9106, 2124, 3576, 3330, 6767, …</code></pre>
+</div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(tmdb)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>     budget             genres            homepage               id        
+ Min.   :        0   Length:4803        Length:4803        Min.   :     5  
+ 1st Qu.:   790000   Class :character   Class :character   1st Qu.:  9014  
+ Median : 15000000   Mode  :character   Mode  :character   Median : 14629  
+ Mean   : 29045040                                         Mean   : 57165  
+ 3rd Qu.: 40000000                                         3rd Qu.: 58610  
+ Max.   :380000000                                         Max.   :459488  
+                                                                           
+   keywords         original_language  original_title       overview        
+ Length:4803        Length:4803        Length:4803        Length:4803       
+ Class :character   Class :character   Class :character   Class :character  
+ Mode  :character   Mode  :character   Mode  :character   Mode  :character  
+                                                                            
+                                                                            
+                                                                            
+                                                                            
+   popularity      production_companies production_countries
+ Min.   :  0.000   Length:4803          Length:4803         
+ 1st Qu.:  4.668   Class :character     Class :character    
+ Median : 12.922   Mode  :character     Mode  :character    
+ Mean   : 21.492                                            
+ 3rd Qu.: 28.314                                            
+ Max.   :875.581                                            
+                                                            
+  release_date           revenue             runtime      spoken_languages  
+ Min.   :1916-09-04   Min.   :0.000e+00   Min.   :  0.0   Length:4803       
+ 1st Qu.:1999-07-14   1st Qu.:0.000e+00   1st Qu.: 94.0   Class :character  
+ Median :2005-10-03   Median :1.917e+07   Median :103.0   Mode  :character  
+ Mean   :2002-12-27   Mean   :8.226e+07   Mean   :106.9                     
+ 3rd Qu.:2011-02-16   3rd Qu.:9.292e+07   3rd Qu.:118.0                     
+ Max.   :2017-02-03   Max.   :2.788e+09   Max.   :338.0                     
+ NA's   :1                                NA's   :2                         
+    status            tagline             title            vote_average   
+ Length:4803        Length:4803        Length:4803        Min.   : 0.000  
+ Class :character   Class :character   Class :character   1st Qu.: 5.600  
+ Mode  :character   Mode  :character   Mode  :character   Median : 6.200  
+                                                          Mean   : 6.092  
+                                                          3rd Qu.: 6.800  
+                                                          Max.   :10.000  
+                                                                          
+   vote_count     
+ Min.   :    0.0  
+ 1st Qu.:   54.0  
+ Median :  235.0  
+ Mean   :  690.2  
+ 3rd Qu.:  737.0  
+ Max.   :13752.0  
+                  </code></pre>
+</div>
+</div>
+<section id="section-2" class="level3">
+<h3 class="anchored" data-anchor-id="section-2">—————————————————————————</h3>
+</section>
+</section>
+<section id="designing-the-database" class="level1">
+<h1>Designing the Database</h1>
+<p>Database design done together by Zoe and Owen</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Create a new empty DuckDB database called movie_db</span></span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="co"># con is our connection object - we use it for all future SQL operations</span></span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a>con <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbConnect</span>(duckdb<span class="sc">::</span><span class="fu">duckdb</span>(), <span class="at">dbdir =</span> <span class="st">"movie_db"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Save each dataset as a CSV so we can load them using COPY FROM</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># This follows the proper SQL workflow for importing data</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(movies, <span class="st">"movies_clean.csv"</span>)</span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(ratings, <span class="st">"ratings_clean.csv"</span>)</span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="fu">write_csv</span>(tmdb, <span class="st">"tmdb_clean.csv"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb21"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> <span class="cf">IF</span> <span class="kw">EXISTS</span> movies;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb22"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create the movies table with explicit field types for each column</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- VARCHAR for text fields, INTEGER for whole numbers, DOUBLE for decimals</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> movies (</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>  title       <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="st">''</span>,</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>  rating      <span class="dt">VARCHAR</span>(<span class="dv">10</span>) <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>  genre       <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>        <span class="dt">INTEGER</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  released    <span class="dt">VARCHAR</span>(<span class="dv">50</span>) <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  score       <span class="dt">DOUBLE</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  votes       <span class="dt">INTEGER</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  director    <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  writer      <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>  star        <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>  country     <span class="dt">VARCHAR</span>(<span class="dv">100</span>) <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>  budget      <span class="dt">DOUBLE</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>  gross       <span class="dt">DOUBLE</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>  company     <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  runtime     <span class="dt">DOUBLE</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span></span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb23"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> movies <span class="kw">FROM</span> <span class="st">'movies_clean.csv'</span> (FORMAT CSV, <span class="kw">HEADER</span>, <span class="kw">NULL</span> <span class="st">'NA'</span>, QUOTE <span class="st">'"'</span>, <span class="kw">ESCAPE</span> <span class="st">'"'</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb24"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>DESCRIBE movies;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">column_name</th>
+<th style="text-align: left;">column_type</th>
+<th style="text-align: left;">null</th>
+<th style="text-align: left;">key</th>
+<th style="text-align: left;">default</th>
+<th style="text-align: left;">extra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">VARCHAR</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">’’</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">rating</td>
+<td style="text-align: left;">VARCHAR</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">genre</td>
+<td style="text-align: left;">VARCHAR</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">year</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">released</td>
+<td style="text-align: left;">VARCHAR</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">score</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">votes</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">director</td>
+<td style="text-align: left;">VARCHAR</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">writer</td>
+<td style="text-align: left;">VARCHAR</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">star</td>
+<td style="text-align: left;">VARCHAR</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb25"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> movies <span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<colgroup>
+<col style="width: 19%">
+<col style="width: 2%">
+<col style="width: 4%">
+<col style="width: 2%">
+<col style="width: 13%">
+<col style="width: 2%">
+<col style="width: 3%">
+<col style="width: 7%">
+<col style="width: 9%">
+<col style="width: 6%">
+<col style="width: 6%">
+<col style="width: 3%">
+<col style="width: 4%">
+<col style="width: 11%">
+<col style="width: 3%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">title</th>
+<th style="text-align: left;">rating</th>
+<th style="text-align: left;">genre</th>
+<th style="text-align: right;">year</th>
+<th style="text-align: left;">released</th>
+<th style="text-align: right;">score</th>
+<th style="text-align: right;">votes</th>
+<th style="text-align: left;">director</th>
+<th style="text-align: left;">writer</th>
+<th style="text-align: left;">star</th>
+<th style="text-align: left;">country</th>
+<th style="text-align: right;">budget</th>
+<th style="text-align: right;">gross</th>
+<th style="text-align: left;">company</th>
+<th style="text-align: right;">runtime</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">The Shining</td>
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">Drama</td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">June 13, 1980 (United States)</td>
+<td style="text-align: right;">8.4</td>
+<td style="text-align: right;">927000</td>
+<td style="text-align: left;">Stanley Kubrick</td>
+<td style="text-align: left;">Stephen King</td>
+<td style="text-align: left;">Jack Nicholson</td>
+<td style="text-align: left;">United Kingdom</td>
+<td style="text-align: right;">1.9e+07</td>
+<td style="text-align: right;">46998772</td>
+<td style="text-align: left;">Warner Bros.</td>
+<td style="text-align: right;">146</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Blue Lagoon</td>
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">Adventure</td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">July 2, 1980 (United States)</td>
+<td style="text-align: right;">5.8</td>
+<td style="text-align: right;">65000</td>
+<td style="text-align: left;">Randal Kleiser</td>
+<td style="text-align: left;">Henry De Vere Stacpoole</td>
+<td style="text-align: left;">Brooke Shields</td>
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">4.5e+06</td>
+<td style="text-align: right;">58853106</td>
+<td style="text-align: left;">Columbia Pictures</td>
+<td style="text-align: right;">104</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Star Wars: Episode V - The Empire Strikes Back</td>
+<td style="text-align: left;">PG</td>
+<td style="text-align: left;">Action</td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">June 20, 1980 (United States)</td>
+<td style="text-align: right;">8.7</td>
+<td style="text-align: right;">1200000</td>
+<td style="text-align: left;">Irvin Kershner</td>
+<td style="text-align: left;">Leigh Brackett</td>
+<td style="text-align: left;">Mark Hamill</td>
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">1.8e+07</td>
+<td style="text-align: right;">538375067</td>
+<td style="text-align: left;">Lucasfilm</td>
+<td style="text-align: right;">124</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Airplane!</td>
+<td style="text-align: left;">PG</td>
+<td style="text-align: left;">Comedy</td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">July 2, 1980 (United States)</td>
+<td style="text-align: right;">7.7</td>
+<td style="text-align: right;">221000</td>
+<td style="text-align: left;">Jim Abrahams</td>
+<td style="text-align: left;">Jim Abrahams</td>
+<td style="text-align: left;">Robert Hays</td>
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">3.5e+06</td>
+<td style="text-align: right;">83453539</td>
+<td style="text-align: left;">Paramount Pictures</td>
+<td style="text-align: right;">88</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Caddyshack</td>
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">Comedy</td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">July 25, 1980 (United States)</td>
+<td style="text-align: right;">7.3</td>
+<td style="text-align: right;">108000</td>
+<td style="text-align: left;">Harold Ramis</td>
+<td style="text-align: left;">Brian Doyle-Murray</td>
+<td style="text-align: left;">Chevy Chase</td>
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">6.0e+06</td>
+<td style="text-align: right;">39846344</td>
+<td style="text-align: left;">Orion Pictures</td>
+<td style="text-align: right;">98</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Friday the 13th</td>
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">Horror</td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">May 9, 1980 (United States)</td>
+<td style="text-align: right;">6.4</td>
+<td style="text-align: right;">123000</td>
+<td style="text-align: left;">Sean S. Cunningham</td>
+<td style="text-align: left;">Victor Miller</td>
+<td style="text-align: left;">Betsy Palmer</td>
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">5.5e+05</td>
+<td style="text-align: right;">39754601</td>
+<td style="text-align: left;">Paramount Pictures</td>
+<td style="text-align: right;">95</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Blues Brothers</td>
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">Action</td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">June 20, 1980 (United States)</td>
+<td style="text-align: right;">7.9</td>
+<td style="text-align: right;">188000</td>
+<td style="text-align: left;">John Landis</td>
+<td style="text-align: left;">Dan Aykroyd</td>
+<td style="text-align: left;">John Belushi</td>
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">2.7e+07</td>
+<td style="text-align: right;">115229890</td>
+<td style="text-align: left;">Universal Pictures</td>
+<td style="text-align: right;">133</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Raging Bull</td>
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">Biography</td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">December 19, 1980 (United States)</td>
+<td style="text-align: right;">8.2</td>
+<td style="text-align: right;">330000</td>
+<td style="text-align: left;">Martin Scorsese</td>
+<td style="text-align: left;">Jake LaMotta</td>
+<td style="text-align: left;">Robert De Niro</td>
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">1.8e+07</td>
+<td style="text-align: right;">23402427</td>
+<td style="text-align: left;">Chartoff-Winkler Productions</td>
+<td style="text-align: right;">129</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Superman II</td>
+<td style="text-align: left;">PG</td>
+<td style="text-align: left;">Action</td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">June 19, 1981 (United States)</td>
+<td style="text-align: right;">6.8</td>
+<td style="text-align: right;">101000</td>
+<td style="text-align: left;">Richard Lester</td>
+<td style="text-align: left;">Jerry Siegel</td>
+<td style="text-align: left;">Gene Hackman</td>
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">5.4e+07</td>
+<td style="text-align: right;">108185706</td>
+<td style="text-align: left;">Dovemead Films</td>
+<td style="text-align: right;">127</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Long Riders</td>
+<td style="text-align: left;">R</td>
+<td style="text-align: left;">Biography</td>
+<td style="text-align: right;">1980</td>
+<td style="text-align: left;">May 16, 1980 (United States)</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">10000</td>
+<td style="text-align: left;">Walter Hill</td>
+<td style="text-align: left;">Bill Bryden</td>
+<td style="text-align: left;">David Carradine</td>
+<td style="text-align: left;">United States</td>
+<td style="text-align: right;">1.0e+07</td>
+<td style="text-align: right;">15795189</td>
+<td style="text-align: left;">United Artists</td>
+<td style="text-align: right;">100</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb26"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> <span class="cf">IF</span> <span class="kw">EXISTS</span> movie_ratings;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb27"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Create the movie_ratings table</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- imdb and metascore are decimals, votes is a whole number</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> movie_ratings (</span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  idx         <span class="dt">INTEGER</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a>  title       <span class="dt">VARCHAR</span>(<span class="dv">255</span>) <span class="kw">NOT</span> <span class="kw">NULL</span> <span class="kw">DEFAULT</span> <span class="st">''</span>,</span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a>  <span class="dt">year</span>        <span class="dt">INTEGER</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>  imdb        <span class="dt">DOUBLE</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  metascore   <span class="dt">DOUBLE</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span>,</span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>  votes       <span class="dt">INTEGER</span> <span class="kw">DEFAULT</span> <span class="kw">NULL</span></span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb28"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="kw">COPY</span> movie_ratings <span class="kw">FROM</span> <span class="st">'ratings_clean.csv'</span> (FORMAT CSV, <span class="kw">HEADER</span>, <span class="kw">NULL</span> <span class="st">'NA'</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb29"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>DESCRIBE movie_ratings;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>6 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">column_name</th>
+<th style="text-align: left;">column_type</th>
+<th style="text-align: left;">null</th>
+<th style="text-align: left;">key</th>
+<th style="text-align: left;">default</th>
+<th style="text-align: left;">extra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">idx</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">VARCHAR</td>
+<td style="text-align: left;">NO</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">’’</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">year</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">imdb</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">metascore</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">votes</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NULL</td>
+<td style="text-align: left;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb30"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> movie_ratings <span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">idx</th>
+<th style="text-align: left;">title</th>
+<th style="text-align: right;">year</th>
+<th style="text-align: right;">imdb</th>
+<th style="text-align: right;">metascore</th>
+<th style="text-align: right;">votes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">0</td>
+<td style="text-align: left;">Gladiator</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">8.5</td>
+<td style="text-align: right;">67</td>
+<td style="text-align: right;">1187559</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">1</td>
+<td style="text-align: left;">Memento</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">8.5</td>
+<td style="text-align: right;">80</td>
+<td style="text-align: right;">1014199</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">2</td>
+<td style="text-align: left;">Snatch</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">8.3</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">707162</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">3</td>
+<td style="text-align: left;">Requiem for a Dream</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">8.3</td>
+<td style="text-align: right;">68</td>
+<td style="text-align: right;">688394</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">4</td>
+<td style="text-align: left;">X-Men</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">7.4</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">526411</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">5</td>
+<td style="text-align: left;">Cast Away</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">7.8</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">465125</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">6</td>
+<td style="text-align: left;">American Psycho</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">7.6</td>
+<td style="text-align: right;">64</td>
+<td style="text-align: right;">422475</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">7</td>
+<td style="text-align: left;">Unbreakable</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">7.3</td>
+<td style="text-align: right;">62</td>
+<td style="text-align: right;">335334</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">8</td>
+<td style="text-align: left;">Meet the Parents</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">7.0</td>
+<td style="text-align: right;">73</td>
+<td style="text-align: right;">290126</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">9</td>
+<td style="text-align: left;">Mission: Impossible II</td>
+<td style="text-align: right;">2000</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">286465</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb31"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="kw">DROP</span> <span class="kw">TABLE</span> <span class="cf">IF</span> <span class="kw">EXISTS</span> tmdb;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb32"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Load the full tmdb CSV directly, then select only the columns we need</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- The tmdb dataset has 20 columns; we extract the relevant ones for analysis</span></span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">TABLE</span> tmdb <span class="kw">AS</span></span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> title,</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(release_date <span class="kw">AS</span> <span class="dt">DATE</span>) <span class="kw">AS</span> release_date,</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(<span class="dt">YEAR</span>(<span class="fu">CAST</span>(release_date <span class="kw">AS</span> <span class="dt">DATE</span>)) <span class="kw">AS</span> <span class="dt">INTEGER</span>) <span class="kw">AS</span> <span class="dt">year</span>,</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(budget <span class="kw">AS</span> <span class="dt">DOUBLE</span>) <span class="kw">AS</span> budget,</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(revenue <span class="kw">AS</span> <span class="dt">DOUBLE</span>) <span class="kw">AS</span> revenue,</span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(popularity <span class="kw">AS</span> <span class="dt">DOUBLE</span>) <span class="kw">AS</span> popularity,</span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(vote_average <span class="kw">AS</span> <span class="dt">DOUBLE</span>) <span class="kw">AS</span> vote_average,</span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(vote_count <span class="kw">AS</span> <span class="dt">INTEGER</span>) <span class="kw">AS</span> vote_count,</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a>       original_language,</span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a>       <span class="fu">CAST</span>(runtime <span class="kw">AS</span> <span class="dt">DOUBLE</span>) <span class="kw">AS</span> runtime,</span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a>       status</span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> read_csv_auto(<span class="st">'tmdb_5000_movies.csv'</span>);</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb33"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a>DESCRIBE tmdb;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">column_name</th>
+<th style="text-align: left;">column_type</th>
+<th style="text-align: left;">null</th>
+<th style="text-align: left;">key</th>
+<th style="text-align: left;">default</th>
+<th style="text-align: left;">extra</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">VARCHAR</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">release_date</td>
+<td style="text-align: left;">DATE</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">year</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">budget</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">revenue</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">popularity</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">vote_average</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">vote_count</td>
+<td style="text-align: left;">INTEGER</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">original_language</td>
+<td style="text-align: left;">VARCHAR</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">runtime</td>
+<td style="text-align: left;">DOUBLE</td>
+<td style="text-align: left;">YES</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+<td style="text-align: left;">NA</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb34"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="op">*</span> <span class="kw">FROM</span> tmdb <span class="kw">LIMIT</span> <span class="dv">10</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<colgroup>
+<col style="width: 27%">
+<col style="width: 8%">
+<col style="width: 3%">
+<col style="width: 6%">
+<col style="width: 7%">
+<col style="width: 7%">
+<col style="width: 8%">
+<col style="width: 7%">
+<col style="width: 12%">
+<col style="width: 5%">
+<col style="width: 6%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">title</th>
+<th style="text-align: left;">release_date</th>
+<th style="text-align: right;">year</th>
+<th style="text-align: right;">budget</th>
+<th style="text-align: right;">revenue</th>
+<th style="text-align: right;">popularity</th>
+<th style="text-align: right;">vote_average</th>
+<th style="text-align: right;">vote_count</th>
+<th style="text-align: left;">original_language</th>
+<th style="text-align: right;">runtime</th>
+<th style="text-align: left;">status</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Avatar</td>
+<td style="text-align: left;">2009-12-10</td>
+<td style="text-align: right;">2009</td>
+<td style="text-align: right;">2.37e+08</td>
+<td style="text-align: right;">2787965087</td>
+<td style="text-align: right;">150.43758</td>
+<td style="text-align: right;">7.2</td>
+<td style="text-align: right;">11800</td>
+<td style="text-align: left;">en</td>
+<td style="text-align: right;">162</td>
+<td style="text-align: left;">Released</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Pirates of the Caribbean: At World’s End</td>
+<td style="text-align: left;">2007-05-19</td>
+<td style="text-align: right;">2007</td>
+<td style="text-align: right;">3.00e+08</td>
+<td style="text-align: right;">961000000</td>
+<td style="text-align: right;">139.08262</td>
+<td style="text-align: right;">6.9</td>
+<td style="text-align: right;">4500</td>
+<td style="text-align: left;">en</td>
+<td style="text-align: right;">169</td>
+<td style="text-align: left;">Released</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Spectre</td>
+<td style="text-align: left;">2015-10-26</td>
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">2.45e+08</td>
+<td style="text-align: right;">880674609</td>
+<td style="text-align: right;">107.37679</td>
+<td style="text-align: right;">6.3</td>
+<td style="text-align: right;">4466</td>
+<td style="text-align: left;">en</td>
+<td style="text-align: right;">148</td>
+<td style="text-align: left;">Released</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">The Dark Knight Rises</td>
+<td style="text-align: left;">2012-07-16</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">2.50e+08</td>
+<td style="text-align: right;">1084939099</td>
+<td style="text-align: right;">112.31295</td>
+<td style="text-align: right;">7.6</td>
+<td style="text-align: right;">9106</td>
+<td style="text-align: left;">en</td>
+<td style="text-align: right;">165</td>
+<td style="text-align: left;">Released</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">John Carter</td>
+<td style="text-align: left;">2012-03-07</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">2.60e+08</td>
+<td style="text-align: right;">284139100</td>
+<td style="text-align: right;">43.92699</td>
+<td style="text-align: right;">6.1</td>
+<td style="text-align: right;">2124</td>
+<td style="text-align: left;">en</td>
+<td style="text-align: right;">132</td>
+<td style="text-align: left;">Released</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Spider-Man 3</td>
+<td style="text-align: left;">2007-05-01</td>
+<td style="text-align: right;">2007</td>
+<td style="text-align: right;">2.58e+08</td>
+<td style="text-align: right;">890871626</td>
+<td style="text-align: right;">115.69981</td>
+<td style="text-align: right;">5.9</td>
+<td style="text-align: right;">3576</td>
+<td style="text-align: left;">en</td>
+<td style="text-align: right;">139</td>
+<td style="text-align: left;">Released</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Tangled</td>
+<td style="text-align: left;">2010-11-24</td>
+<td style="text-align: right;">2010</td>
+<td style="text-align: right;">2.60e+08</td>
+<td style="text-align: right;">591794936</td>
+<td style="text-align: right;">48.68197</td>
+<td style="text-align: right;">7.4</td>
+<td style="text-align: right;">3330</td>
+<td style="text-align: left;">en</td>
+<td style="text-align: right;">100</td>
+<td style="text-align: left;">Released</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Avengers: Age of Ultron</td>
+<td style="text-align: left;">2015-04-22</td>
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">2.80e+08</td>
+<td style="text-align: right;">1405403694</td>
+<td style="text-align: right;">134.27923</td>
+<td style="text-align: right;">7.3</td>
+<td style="text-align: right;">6767</td>
+<td style="text-align: left;">en</td>
+<td style="text-align: right;">141</td>
+<td style="text-align: left;">Released</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Harry Potter and the Half-Blood Prince</td>
+<td style="text-align: left;">2009-07-07</td>
+<td style="text-align: right;">2009</td>
+<td style="text-align: right;">2.50e+08</td>
+<td style="text-align: right;">933959197</td>
+<td style="text-align: right;">98.88564</td>
+<td style="text-align: right;">7.4</td>
+<td style="text-align: right;">5293</td>
+<td style="text-align: left;">en</td>
+<td style="text-align: right;">153</td>
+<td style="text-align: left;">Released</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Batman v Superman: Dawn of Justice</td>
+<td style="text-align: left;">2016-03-23</td>
+<td style="text-align: right;">2016</td>
+<td style="text-align: right;">2.50e+08</td>
+<td style="text-align: right;">873260194</td>
+<td style="text-align: right;">155.79045</td>
+<td style="text-align: right;">5.7</td>
+<td style="text-align: right;">7004</td>
+<td style="text-align: left;">en</td>
+<td style="text-align: right;">151</td>
+<td style="text-align: left;">Released</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb35"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a>SHOW <span class="kw">TABLES</span>;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>3 records</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">name</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">movie_ratings</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">movies</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">tmdb</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<section id="section-3" class="level3">
+<h3 class="anchored" data-anchor-id="section-3">—————————————————————————</h3>
+</section>
+</section>
+<section id="querying-data-using-sql" class="level1">
+<h1>Querying Data Using SQL</h1>
+<section id="query-1---top-10-most-profitable-movies" class="level2">
+<h2 class="anchored" data-anchor-id="query-1---top-10-most-profitable-movies">Query 1 - Top 10 Most Profitable Movies</h2>
+<p>Done by Zoe — Overall goal: Which movies and genres are the most successful?</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb36"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Calculate profit as revenue minus budget</span></span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Filter out rows where budget or revenue is missing (0)</span></span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> title,</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a>       <span class="dt">year</span>,</span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a>       budget,</span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>       revenue,</span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a>       revenue <span class="op">-</span> budget <span class="kw">AS</span> profit</span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> tmdb</span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> revenue <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">AND</span> budget <span class="op">&gt;</span> <span class="dv">0</span></span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> profit <span class="kw">DESC</span></span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">10</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<colgroup>
+<col style="width: 56%">
+<col style="width: 6%">
+<col style="width: 10%">
+<col style="width: 13%">
+<col style="width: 13%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">title</th>
+<th style="text-align: right;">year</th>
+<th style="text-align: right;">budget</th>
+<th style="text-align: right;">revenue</th>
+<th style="text-align: right;">profit</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Avatar</td>
+<td style="text-align: right;">2009</td>
+<td style="text-align: right;">2.37e+08</td>
+<td style="text-align: right;">2787965087</td>
+<td style="text-align: right;">2550965087</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Titanic</td>
+<td style="text-align: right;">1997</td>
+<td style="text-align: right;">2.00e+08</td>
+<td style="text-align: right;">1845034188</td>
+<td style="text-align: right;">1645034188</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Jurassic World</td>
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">1.50e+08</td>
+<td style="text-align: right;">1513528810</td>
+<td style="text-align: right;">1363528810</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Furious 7</td>
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">1.90e+08</td>
+<td style="text-align: right;">1506249360</td>
+<td style="text-align: right;">1316249360</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Avengers</td>
+<td style="text-align: right;">2012</td>
+<td style="text-align: right;">2.20e+08</td>
+<td style="text-align: right;">1519557910</td>
+<td style="text-align: right;">1299557910</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Avengers: Age of Ultron</td>
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">2.80e+08</td>
+<td style="text-align: right;">1405403694</td>
+<td style="text-align: right;">1125403694</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Frozen</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">1.50e+08</td>
+<td style="text-align: right;">1274219009</td>
+<td style="text-align: right;">1124219009</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Minions</td>
+<td style="text-align: right;">2015</td>
+<td style="text-align: right;">7.40e+07</td>
+<td style="text-align: right;">1156730962</td>
+<td style="text-align: right;">1082730962</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">The Lord of the Rings: The Return of the King</td>
+<td style="text-align: right;">2003</td>
+<td style="text-align: right;">9.40e+07</td>
+<td style="text-align: right;">1118888979</td>
+<td style="text-align: right;">1024888979</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Iron Man 3</td>
+<td style="text-align: right;">2013</td>
+<td style="text-align: right;">2.00e+08</td>
+<td style="text-align: right;">1215439994</td>
+<td style="text-align: right;">1015439994</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="query-2---average-imdb-rating-and-metascore-by-genre" class="level2">
+<h2 class="anchored" data-anchor-id="query-2---average-imdb-rating-and-metascore-by-genre">Query 2 - Average IMDb Rating and Metascore by Genre</h2>
+<p>Done by Zoe</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb37"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb37-1"><a href="#cb37-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Join movies and movie_ratings on title and year to match films correctly</span></span>
+<span id="cb37-2"><a href="#cb37-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Group by genre to get average ratings per genre</span></span>
+<span id="cb37-3"><a href="#cb37-3" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> m.genre,</span>
+<span id="cb37-4"><a href="#cb37-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">ROUND</span>(<span class="fu">AVG</span>(r.imdb), <span class="dv">2</span>) <span class="kw">AS</span> avg_imdb,</span>
+<span id="cb37-5"><a href="#cb37-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">ROUND</span>(<span class="fu">AVG</span>(r.metascore), <span class="dv">2</span>) <span class="kw">AS</span> avg_metascore,</span>
+<span id="cb37-6"><a href="#cb37-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> movie_count</span>
+<span id="cb37-7"><a href="#cb37-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> movie_ratings r</span>
+<span id="cb37-8"><a href="#cb37-8" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> movies m <span class="kw">ON</span> r.title <span class="op">=</span> m.title</span>
+<span id="cb37-9"><a href="#cb37-9" aria-hidden="true" tabindex="-1"></a>             <span class="kw">AND</span> r.<span class="dt">year</span> <span class="op">=</span> m.<span class="dt">year</span></span>
+<span id="cb37-10"><a href="#cb37-10" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> m.genre</span>
+<span id="cb37-11"><a href="#cb37-11" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> avg_imdb <span class="kw">DESC</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">genre</th>
+<th style="text-align: right;">avg_imdb</th>
+<th style="text-align: right;">avg_metascore</th>
+<th style="text-align: right;">movie_count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Biography</td>
+<td style="text-align: right;">7.71</td>
+<td style="text-align: right;">76.78</td>
+<td style="text-align: right;">96</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Drama</td>
+<td style="text-align: right;">7.50</td>
+<td style="text-align: right;">78.09</td>
+<td style="text-align: right;">186</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mystery</td>
+<td style="text-align: right;">7.50</td>
+<td style="text-align: right;">69.75</td>
+<td style="text-align: right;">10</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Animation</td>
+<td style="text-align: right;">7.41</td>
+<td style="text-align: right;">76.44</td>
+<td style="text-align: right;">104</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Crime</td>
+<td style="text-align: right;">7.38</td>
+<td style="text-align: right;">73.67</td>
+<td style="text-align: right;">92</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Sci-Fi</td>
+<td style="text-align: right;">7.35</td>
+<td style="text-align: right;">64.00</td>
+<td style="text-align: right;">4</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Adventure</td>
+<td style="text-align: right;">7.20</td>
+<td style="text-align: right;">72.65</td>
+<td style="text-align: right;">108</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Family</td>
+<td style="text-align: right;">7.20</td>
+<td style="text-align: right;">65.00</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Romance</td>
+<td style="text-align: right;">7.10</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Comedy</td>
+<td style="text-align: right;">6.93</td>
+<td style="text-align: right;">73.45</td>
+<td style="text-align: right;">260</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="query-3---average-popularity-and-revenue-by-decade" class="level2">
+<h2 class="anchored" data-anchor-id="query-3---average-popularity-and-revenue-by-decade">Query 3 - Average Popularity and Revenue by Decade</h2>
+<p>Done by Zoe</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb38"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Group movies into decades using integer division (e.g., 1987 / 10 * 10 = 1980)</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Filter out rows with missing revenue</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> (<span class="dt">year</span> <span class="op">/</span> <span class="dv">10</span>) <span class="op">*</span> <span class="dv">10</span> <span class="kw">AS</span> decade,</span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>       <span class="fu">ROUND</span>(<span class="fu">AVG</span>(popularity), <span class="dv">2</span>) <span class="kw">AS</span> avg_popularity,</span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">ROUND</span>(<span class="fu">AVG</span>(revenue), <span class="dv">2</span>) <span class="kw">AS</span> avg_revenue,</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> movie_count</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> tmdb</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="dt">year</span> <span class="kw">IS</span> <span class="kw">NOT</span> <span class="kw">NULL</span></span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>  <span class="kw">AND</span> revenue <span class="op">&gt;</span> <span class="dv">0</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> decade</span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> decade</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">decade</th>
+<th style="text-align: right;">avg_popularity</th>
+<th style="text-align: right;">avg_revenue</th>
+<th style="text-align: right;">movie_count</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1916</td>
+<td style="text-align: right;">3.23</td>
+<td style="text-align: right;">8394751</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1925</td>
+<td style="text-align: right;">0.79</td>
+<td style="text-align: right;">22000000</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1927</td>
+<td style="text-align: right;">32.35</td>
+<td style="text-align: right;">650422</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1929</td>
+<td style="text-align: right;">0.97</td>
+<td style="text-align: right;">4358000</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1930</td>
+<td style="text-align: right;">8.48</td>
+<td style="text-align: right;">8000000</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1932</td>
+<td style="text-align: right;">1.20</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1933</td>
+<td style="text-align: right;">1.28</td>
+<td style="text-align: right;">2240500</td>
+<td style="text-align: right;">2</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1934</td>
+<td style="text-align: right;">11.87</td>
+<td style="text-align: right;">4500000</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">1935</td>
+<td style="text-align: right;">3.90</td>
+<td style="text-align: right;">3202000</td>
+<td style="text-align: right;">1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">1936</td>
+<td style="text-align: right;">15.62</td>
+<td style="text-align: right;">5618000</td>
+<td style="text-align: right;">2</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="query-4---full-3-table-join" class="level2">
+<h2 class="anchored" data-anchor-id="query-4---full-3-table-join">Query 4 - Full 3-Table JOIN</h2>
+<p>Done by Zoe</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb39"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb39-1"><a href="#cb39-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Join all three tables to combine genre/director info with ratings and TMDB metrics</span></span>
+<span id="cb39-2"><a href="#cb39-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Filter to only movies with known budgets and revenues</span></span>
+<span id="cb39-3"><a href="#cb39-3" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> m.title,</span>
+<span id="cb39-4"><a href="#cb39-4" aria-hidden="true" tabindex="-1"></a>       m.genre,</span>
+<span id="cb39-5"><a href="#cb39-5" aria-hidden="true" tabindex="-1"></a>       m.director,</span>
+<span id="cb39-6"><a href="#cb39-6" aria-hidden="true" tabindex="-1"></a>       r.imdb,</span>
+<span id="cb39-7"><a href="#cb39-7" aria-hidden="true" tabindex="-1"></a>       r.metascore,</span>
+<span id="cb39-8"><a href="#cb39-8" aria-hidden="true" tabindex="-1"></a>       t.budget,</span>
+<span id="cb39-9"><a href="#cb39-9" aria-hidden="true" tabindex="-1"></a>       t.revenue,</span>
+<span id="cb39-10"><a href="#cb39-10" aria-hidden="true" tabindex="-1"></a>       t.popularity</span>
+<span id="cb39-11"><a href="#cb39-11" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> movies m</span>
+<span id="cb39-12"><a href="#cb39-12" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> movie_ratings r <span class="kw">ON</span> r.title <span class="op">=</span> m.title</span>
+<span id="cb39-13"><a href="#cb39-13" aria-hidden="true" tabindex="-1"></a>                    <span class="kw">AND</span> r.<span class="dt">year</span> <span class="op">=</span> m.<span class="dt">year</span></span>
+<span id="cb39-14"><a href="#cb39-14" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> tmdb t <span class="kw">ON</span> t.title <span class="op">=</span> m.title</span>
+<span id="cb39-15"><a href="#cb39-15" aria-hidden="true" tabindex="-1"></a>           <span class="kw">AND</span> t.<span class="dt">year</span> <span class="op">=</span> m.<span class="dt">year</span></span>
+<span id="cb39-16"><a href="#cb39-16" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> t.budget <span class="op">&gt;</span> <span class="dv">0</span> <span class="kw">AND</span> t.revenue <span class="op">&gt;</span> <span class="dv">0</span></span>
+<span id="cb39-17"><a href="#cb39-17" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> t.popularity <span class="kw">DESC</span></span>
+<span id="cb39-18"><a href="#cb39-18" aria-hidden="true" tabindex="-1"></a><span class="kw">LIMIT</span> <span class="dv">20</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Displaying records 1 - 10</caption>
+<colgroup>
+<col style="width: 24%">
+<col style="width: 10%">
+<col style="width: 18%">
+<col style="width: 5%">
+<col style="width: 10%">
+<col style="width: 9%">
+<col style="width: 11%">
+<col style="width: 11%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">title</th>
+<th style="text-align: left;">genre</th>
+<th style="text-align: left;">director</th>
+<th style="text-align: right;">imdb</th>
+<th style="text-align: right;">metascore</th>
+<th style="text-align: right;">budget</th>
+<th style="text-align: right;">revenue</th>
+<th style="text-align: right;">popularity</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Minions</td>
+<td style="text-align: left;">Animation</td>
+<td style="text-align: left;">Kyle Balda</td>
+<td style="text-align: right;">6.4</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7.40e+07</td>
+<td style="text-align: right;">1156730962</td>
+<td style="text-align: right;">875.5813</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Minions</td>
+<td style="text-align: left;">Animation</td>
+<td style="text-align: left;">Kyle Balda</td>
+<td style="text-align: right;">6.4</td>
+<td style="text-align: right;">NA</td>
+<td style="text-align: right;">7.40e+07</td>
+<td style="text-align: right;">1156730962</td>
+<td style="text-align: right;">875.5813</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Interstellar</td>
+<td style="text-align: left;">Adventure</td>
+<td style="text-align: left;">Christopher Nolan</td>
+<td style="text-align: right;">8.6</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">1.65e+08</td>
+<td style="text-align: right;">675120017</td>
+<td style="text-align: right;">724.2478</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Interstellar</td>
+<td style="text-align: left;">Adventure</td>
+<td style="text-align: left;">Christopher Nolan</td>
+<td style="text-align: right;">8.6</td>
+<td style="text-align: right;">74</td>
+<td style="text-align: right;">1.65e+08</td>
+<td style="text-align: right;">675120017</td>
+<td style="text-align: right;">724.2478</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Deadpool</td>
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">Tim Miller</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">5.80e+07</td>
+<td style="text-align: right;">783112979</td>
+<td style="text-align: right;">514.5700</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Deadpool</td>
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">Tim Miller</td>
+<td style="text-align: right;">8.0</td>
+<td style="text-align: right;">65</td>
+<td style="text-align: right;">5.80e+07</td>
+<td style="text-align: right;">783112979</td>
+<td style="text-align: right;">514.5700</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Guardians of the Galaxy</td>
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">James Gunn</td>
+<td style="text-align: right;">8.1</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">1.70e+08</td>
+<td style="text-align: right;">773328629</td>
+<td style="text-align: right;">481.0986</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Guardians of the Galaxy</td>
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">James Gunn</td>
+<td style="text-align: right;">8.1</td>
+<td style="text-align: right;">76</td>
+<td style="text-align: right;">1.70e+08</td>
+<td style="text-align: right;">773328629</td>
+<td style="text-align: right;">481.0986</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Mad Max: Fury Road</td>
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">George Miller</td>
+<td style="text-align: right;">8.1</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">1.50e+08</td>
+<td style="text-align: right;">378858340</td>
+<td style="text-align: right;">434.2786</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Mad Max: Fury Road</td>
+<td style="text-align: left;">Action</td>
+<td style="text-align: left;">George Miller</td>
+<td style="text-align: right;">8.1</td>
+<td style="text-align: right;">90</td>
+<td style="text-align: right;">1.50e+08</td>
+<td style="text-align: right;">378858340</td>
+<td style="text-align: right;">434.2786</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</section>
+<section id="owens-queries---movie-ratings-and-genre-trends-over-time" class="level2">
+<h2 class="anchored" data-anchor-id="owens-queries---movie-ratings-and-genre-trends-over-time">Owen’s Queries - Movie Ratings and Genre Trends Over Time</h2>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb40"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Join tmdb and movies to combine release year, content rating, genre, and vote average</span></span>
+<span id="cb40-2"><a href="#cb40-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Filter to only the four major content ratings for clarity</span></span>
+<span id="cb40-3"><a href="#cb40-3" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TABLE</span> table1 <span class="kw">AS</span></span>
+<span id="cb40-4"><a href="#cb40-4" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> <span class="fu">EXTRACT</span>(<span class="dt">YEAR</span> <span class="kw">FROM</span> <span class="fu">CAST</span>(release_date <span class="kw">AS</span> <span class="dt">DATE</span>)) <span class="kw">AS</span> <span class="dt">year</span>,</span>
+<span id="cb40-5"><a href="#cb40-5" aria-hidden="true" tabindex="-1"></a>       <span class="fu">FLOOR</span>(<span class="fu">EXTRACT</span>(<span class="dt">YEAR</span> <span class="kw">FROM</span> <span class="fu">CAST</span>(release_date <span class="kw">AS</span> <span class="dt">DATE</span>)) <span class="op">/</span> <span class="dv">10</span>) <span class="op">*</span> <span class="dv">10</span> <span class="kw">AS</span> decade,</span>
+<span id="cb40-6"><a href="#cb40-6" aria-hidden="true" tabindex="-1"></a>       tmdb.title,</span>
+<span id="cb40-7"><a href="#cb40-7" aria-hidden="true" tabindex="-1"></a>       movies.rating,</span>
+<span id="cb40-8"><a href="#cb40-8" aria-hidden="true" tabindex="-1"></a>       movies.genre,</span>
+<span id="cb40-9"><a href="#cb40-9" aria-hidden="true" tabindex="-1"></a>       vote_average</span>
+<span id="cb40-10"><a href="#cb40-10" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> tmdb</span>
+<span id="cb40-11"><a href="#cb40-11" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> movies <span class="kw">ON</span> tmdb.title <span class="op">=</span> movies.title</span>
+<span id="cb40-12"><a href="#cb40-12" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> movies.rating <span class="kw">IN</span> (<span class="st">'R'</span>, <span class="st">'PG'</span>, <span class="st">'PG-13'</span>, <span class="st">'G'</span>)</span>
+<span id="cb40-13"><a href="#cb40-13" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> <span class="dt">year</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb41"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb41-1"><a href="#cb41-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Count movies per year per rating and compute average votes</span></span>
+<span id="cb41-2"><a href="#cb41-2" aria-hidden="true" tabindex="-1"></a><span class="co">-- Used ChatGPT assistance to figure out the CROSS JOIN and proportion logic</span></span>
+<span id="cb41-3"><a href="#cb41-3" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TABLE</span> table2 <span class="kw">AS</span></span>
+<span id="cb41-4"><a href="#cb41-4" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> base <span class="kw">AS</span> (</span>
+<span id="cb41-5"><a href="#cb41-5" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> <span class="dt">year</span>, rating,</span>
+<span id="cb41-6"><a href="#cb41-6" aria-hidden="true" tabindex="-1"></a>           <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> <span class="fu">count</span>,</span>
+<span id="cb41-7"><a href="#cb41-7" aria-hidden="true" tabindex="-1"></a>           <span class="fu">AVG</span>(vote_average) <span class="kw">AS</span> avg_votes</span>
+<span id="cb41-8"><a href="#cb41-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> table1</span>
+<span id="cb41-9"><a href="#cb41-9" aria-hidden="true" tabindex="-1"></a>    <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dt">year</span>, rating</span>
+<span id="cb41-10"><a href="#cb41-10" aria-hidden="true" tabindex="-1"></a>),</span>
+<span id="cb41-11"><a href="#cb41-11" aria-hidden="true" tabindex="-1"></a>years <span class="kw">AS</span> (<span class="kw">SELECT</span> <span class="kw">DISTINCT</span> <span class="dt">year</span> <span class="kw">FROM</span> table1),</span>
+<span id="cb41-12"><a href="#cb41-12" aria-hidden="true" tabindex="-1"></a>ratings <span class="kw">AS</span> (<span class="kw">SELECT</span> <span class="kw">DISTINCT</span> rating <span class="kw">FROM</span> table1),</span>
+<span id="cb41-13"><a href="#cb41-13" aria-hidden="true" tabindex="-1"></a>all_combos <span class="kw">AS</span> (</span>
+<span id="cb41-14"><a href="#cb41-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> y.<span class="dt">year</span>, r.rating</span>
+<span id="cb41-15"><a href="#cb41-15" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> years y <span class="kw">CROSS</span> <span class="kw">JOIN</span> ratings r</span>
+<span id="cb41-16"><a href="#cb41-16" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb41-17"><a href="#cb41-17" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> a.<span class="dt">year</span>, a.rating,</span>
+<span id="cb41-18"><a href="#cb41-18" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COALESCE</span>(b.<span class="fu">count</span>, <span class="dv">0</span>) <span class="kw">AS</span> <span class="fu">count</span>,</span>
+<span id="cb41-19"><a href="#cb41-19" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COALESCE</span>(b.<span class="fu">count</span>, <span class="dv">0</span>) <span class="op">*</span> <span class="fl">1.0</span></span>
+<span id="cb41-20"><a href="#cb41-20" aria-hidden="true" tabindex="-1"></a>           <span class="op">/</span> <span class="fu">SUM</span>(<span class="fu">COALESCE</span>(b.<span class="fu">count</span>, <span class="dv">0</span>)) <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> a.<span class="dt">year</span>) <span class="kw">AS</span> proportion,</span>
+<span id="cb41-21"><a href="#cb41-21" aria-hidden="true" tabindex="-1"></a>       b.avg_votes</span>
+<span id="cb41-22"><a href="#cb41-22" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> all_combos a</span>
+<span id="cb41-23"><a href="#cb41-23" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> base b <span class="kw">ON</span> a.<span class="dt">year</span> <span class="op">=</span> b.<span class="dt">year</span> <span class="kw">AND</span> a.rating <span class="op">=</span> b.rating</span>
+<span id="cb41-24"><a href="#cb41-24" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="fu">count</span> <span class="op">!=</span> <span class="dv">0</span></span>
+<span id="cb41-25"><a href="#cb41-25" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> a.<span class="dt">year</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Same structure as table2 but grouped by genre instead of rating</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TABLE</span> table3 <span class="kw">AS</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="kw">WITH</span> base <span class="kw">AS</span> (</span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> <span class="dt">year</span>, genre,</span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a>           <span class="fu">COUNT</span>(<span class="op">*</span>) <span class="kw">AS</span> <span class="fu">count</span>,</span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>           <span class="fu">AVG</span>(vote_average) <span class="kw">AS</span> avg_votes</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> table1</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>    <span class="kw">GROUP</span> <span class="kw">BY</span> <span class="dt">year</span>, genre</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>),</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>years <span class="kw">AS</span> (<span class="kw">SELECT</span> <span class="kw">DISTINCT</span> <span class="dt">year</span> <span class="kw">FROM</span> table1),</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>genres <span class="kw">AS</span> (<span class="kw">SELECT</span> <span class="kw">DISTINCT</span> genre <span class="kw">FROM</span> table1),</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>all_combos <span class="kw">AS</span> (</span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>    <span class="kw">SELECT</span> y.<span class="dt">year</span>, g.genre</span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a>    <span class="kw">FROM</span> years y <span class="kw">CROSS</span> <span class="kw">JOIN</span> genres g</span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> a.<span class="dt">year</span>, a.genre,</span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COALESCE</span>(b.<span class="fu">count</span>, <span class="dv">0</span>) <span class="kw">AS</span> <span class="fu">count</span>,</span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a>       <span class="fu">COALESCE</span>(b.<span class="fu">count</span>, <span class="dv">0</span>) <span class="op">*</span> <span class="fl">1.0</span></span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a>           <span class="op">/</span> <span class="fu">SUM</span>(<span class="fu">COALESCE</span>(b.<span class="fu">count</span>, <span class="dv">0</span>)) <span class="kw">OVER</span> (<span class="kw">PARTITION</span> <span class="kw">BY</span> a.<span class="dt">year</span>) <span class="kw">AS</span> proportion,</span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a>       b.avg_votes</span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> all_combos a</span>
+<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a><span class="kw">LEFT</span> <span class="kw">JOIN</span> base b <span class="kw">ON</span> a.<span class="dt">year</span> <span class="op">=</span> b.<span class="dt">year</span> <span class="kw">AND</span> a.genre <span class="op">=</span> b.genre</span>
+<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a><span class="kw">WHERE</span> <span class="fu">count</span> <span class="op">!=</span> <span class="dv">0</span></span>
+<span id="cb42-24"><a href="#cb42-24" aria-hidden="true" tabindex="-1"></a><span class="kw">ORDER</span> <span class="kw">BY</span> a.<span class="dt">year</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb43"><pre class="sourceCode sql code-with-copy"><code class="sourceCode sql"><span id="cb43-1"><a href="#cb43-1" aria-hidden="true" tabindex="-1"></a><span class="co">-- Combine table2 and table3 into a single summary table for visualization</span></span>
+<span id="cb43-2"><a href="#cb43-2" aria-hidden="true" tabindex="-1"></a><span class="kw">CREATE</span> <span class="kw">OR</span> <span class="kw">REPLACE</span> <span class="kw">TABLE</span> table4 <span class="kw">AS</span></span>
+<span id="cb43-3"><a href="#cb43-3" aria-hidden="true" tabindex="-1"></a><span class="kw">SELECT</span> table2.<span class="dt">year</span>,</span>
+<span id="cb43-4"><a href="#cb43-4" aria-hidden="true" tabindex="-1"></a>       table2.rating,</span>
+<span id="cb43-5"><a href="#cb43-5" aria-hidden="true" tabindex="-1"></a>       table2.proportion <span class="kw">AS</span> rating_prop,</span>
+<span id="cb43-6"><a href="#cb43-6" aria-hidden="true" tabindex="-1"></a>       table3.genre,</span>
+<span id="cb43-7"><a href="#cb43-7" aria-hidden="true" tabindex="-1"></a>       table3.proportion <span class="kw">AS</span> genre_prop,</span>
+<span id="cb43-8"><a href="#cb43-8" aria-hidden="true" tabindex="-1"></a>       <span class="fu">AVG</span>(table2.avg_votes) <span class="kw">AS</span> avg_votes</span>
+<span id="cb43-9"><a href="#cb43-9" aria-hidden="true" tabindex="-1"></a><span class="kw">FROM</span> table2</span>
+<span id="cb43-10"><a href="#cb43-10" aria-hidden="true" tabindex="-1"></a><span class="kw">JOIN</span> table3 <span class="kw">ON</span> table2.<span class="dt">year</span> <span class="op">=</span> table3.<span class="dt">year</span></span>
+<span id="cb43-11"><a href="#cb43-11" aria-hidden="true" tabindex="-1"></a><span class="kw">GROUP</span> <span class="kw">BY</span> table2.<span class="dt">year</span>, table2.rating, rating_prop, table3.genre, genre_prop</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<section id="section-4" class="level3">
+<h3 class="anchored" data-anchor-id="section-4">—————————————————————————</h3>
+</section>
+</section>
+</section>
+<section id="creating-data-visualizations" class="level1">
+<h1>Creating Data Visualizations</h1>
+<section id="visualization-1---average-imdb-rating-by-genre" class="level2">
+<h2 class="anchored" data-anchor-id="visualization-1---average-imdb-rating-by-genre">Visualization 1 - Average IMDb Rating by Genre</h2>
+<p>Done by Zoe</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull the genre ratings summary from the database into R for plotting</span></span>
+<span id="cb44-2"><a href="#cb44-2" aria-hidden="true" tabindex="-1"></a>genre_ratings <span class="ot">&lt;-</span> <span class="fu">dbGetQuery</span>(con, <span class="st">"</span></span>
+<span id="cb44-3"><a href="#cb44-3" aria-hidden="true" tabindex="-1"></a><span class="st">  SELECT m.genre,</span></span>
+<span id="cb44-4"><a href="#cb44-4" aria-hidden="true" tabindex="-1"></a><span class="st">         ROUND(AVG(r.imdb), 2) AS avg_imdb,</span></span>
+<span id="cb44-5"><a href="#cb44-5" aria-hidden="true" tabindex="-1"></a><span class="st">         COUNT(*) AS movie_count</span></span>
+<span id="cb44-6"><a href="#cb44-6" aria-hidden="true" tabindex="-1"></a><span class="st">  FROM movie_ratings r</span></span>
+<span id="cb44-7"><a href="#cb44-7" aria-hidden="true" tabindex="-1"></a><span class="st">  JOIN movies m ON r.title = m.title</span></span>
+<span id="cb44-8"><a href="#cb44-8" aria-hidden="true" tabindex="-1"></a><span class="st">               AND r.year = m.year</span></span>
+<span id="cb44-9"><a href="#cb44-9" aria-hidden="true" tabindex="-1"></a><span class="st">  GROUP BY m.genre</span></span>
+<span id="cb44-10"><a href="#cb44-10" aria-hidden="true" tabindex="-1"></a><span class="st">  ORDER BY avg_imdb DESC</span></span>
+<span id="cb44-11"><a href="#cb44-11" aria-hidden="true" tabindex="-1"></a><span class="st">"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb45"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb45-1"><a href="#cb45-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Bar chart of average IMDb rating by genre</span></span>
+<span id="cb45-2"><a href="#cb45-2" aria-hidden="true" tabindex="-1"></a><span class="co"># reorder() sorts genres from lowest to highest avg_imdb for readability</span></span>
+<span id="cb45-3"><a href="#cb45-3" aria-hidden="true" tabindex="-1"></a><span class="co"># coord_flip() makes genre labels horizontal and easier to read</span></span>
+<span id="cb45-4"><a href="#cb45-4" aria-hidden="true" tabindex="-1"></a><span class="co"># scale_fill_gradient applies a blue color gradient - darker = higher rating</span></span>
+<span id="cb45-5"><a href="#cb45-5" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(genre_ratings, <span class="fu">aes</span>(<span class="at">x =</span> <span class="fu">reorder</span>(genre, avg_imdb), <span class="at">y =</span> avg_imdb, <span class="at">fill =</span> avg_imdb)) <span class="sc">+</span></span>
+<span id="cb45-6"><a href="#cb45-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb45-7"><a href="#cb45-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_flip</span>() <span class="sc">+</span></span>
+<span id="cb45-8"><a href="#cb45-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_gradient</span>(<span class="at">low =</span> <span class="st">"lightblue"</span>, <span class="at">high =</span> <span class="st">"darkblue"</span>) <span class="sc">+</span></span>
+<span id="cb45-9"><a href="#cb45-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb45-10"><a href="#cb45-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Average IMDb Rating by Genre"</span>,</span>
+<span id="cb45-11"><a href="#cb45-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Based on movies appearing in both datasets"</span>,</span>
+<span id="cb45-12"><a href="#cb45-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Genre"</span>,</span>
+<span id="cb45-13"><a href="#cb45-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Average IMDb Rating"</span>,</span>
+<span id="cb45-14"><a href="#cb45-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">fill =</span> <span class="st">"Avg Rating"</span></span>
+<span id="cb45-15"><a href="#cb45-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb45-16"><a href="#cb45-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Project-2_files/figure-html/unnamed-chunk-31-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="visualizations-2-3-4---movie-trends-over-time-1980-2016" class="level2">
+<h2 class="anchored" data-anchor-id="visualizations-2-3-4---movie-trends-over-time-1980-2016">Visualizations 2, 3, 4 - Movie Trends Over Time (1980-2016)</h2>
+<p>Done by Owen</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Pull table1 and table4 from the database into R for plotting</span></span>
+<span id="cb46-2"><a href="#cb46-2" aria-hidden="true" tabindex="-1"></a>table1 <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbGetQuery</span>(con, <span class="st">"SELECT * FROM table1"</span>)</span>
+<span id="cb46-3"><a href="#cb46-3" aria-hidden="true" tabindex="-1"></a>table4 <span class="ot">&lt;-</span> DBI<span class="sc">::</span><span class="fu">dbGetQuery</span>(con, <span class="st">"SELECT * FROM table4"</span>)</span>
+<span id="cb46-4"><a href="#cb46-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-5"><a href="#cb46-5" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter to only include movies from 1980 onwards</span></span>
+<span id="cb46-6"><a href="#cb46-6" aria-hidden="true" tabindex="-1"></a>revised_table1 <span class="ot">&lt;-</span> table1 <span class="sc">|&gt;</span> <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">1980</span>)</span>
+<span id="cb46-7"><a href="#cb46-7" aria-hidden="true" tabindex="-1"></a>revised_table4 <span class="ot">&lt;-</span> table4 <span class="sc">|&gt;</span> <span class="fu">filter</span>(year <span class="sc">&gt;=</span> <span class="dv">1980</span>)</span>
+<span id="cb46-8"><a href="#cb46-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb46-9"><a href="#cb46-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Compute the average IMDb vote score per year across all movies</span></span>
+<span id="cb46-10"><a href="#cb46-10" aria-hidden="true" tabindex="-1"></a>avg_votes_by_year <span class="ot">&lt;-</span> revised_table1 <span class="sc">|&gt;</span></span>
+<span id="cb46-11"><a href="#cb46-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">group_by</span>(year) <span class="sc">|&gt;</span></span>
+<span id="cb46-12"><a href="#cb46-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">summarise</span>(<span class="at">avg_votes =</span> <span class="fu">mean</span>(vote_average, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb47"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb47-1"><a href="#cb47-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Line + point plot of average IMDb vote score by year</span></span>
+<span id="cb47-2"><a href="#cb47-2" aria-hidden="true" tabindex="-1"></a><span class="co"># The peach background (FFE5B4) is a consistent theme across Owen's visuals</span></span>
+<span id="cb47-3"><a href="#cb47-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(avg_votes_by_year, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> avg_votes)) <span class="sc">+</span></span>
+<span id="cb47-4"><a href="#cb47-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb47-5"><a href="#cb47-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb47-6"><a href="#cb47-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Average IMDB Votes"</span>,</span>
+<span id="cb47-7"><a href="#cb47-7" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"Movie Popularity over Time (1980-2016)"</span>) <span class="sc">+</span></span>
+<span id="cb47-8"><a href="#cb47-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb47-9"><a href="#cb47-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb47-10"><a href="#cb47-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb47-11"><a href="#cb47-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb47-12"><a href="#cb47-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb47-13"><a href="#cb47-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb47-14"><a href="#cb47-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">color =</span> <span class="st">"black"</span>),</span>
+<span id="cb47-15"><a href="#cb47-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">linewidth =</span> <span class="dv">1</span>),</span>
+<span id="cb47-16"><a href="#cb47-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb47-17"><a href="#cb47-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#FFE5B4"</span>, <span class="at">color =</span> <span class="cn">NA</span>)</span>
+<span id="cb47-18"><a href="#cb47-18" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Project-2_files/figure-html/unnamed-chunk-33-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Stacked bar chart showing movies of each content rating released per year</span></span>
+<span id="cb48-2"><a href="#cb48-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(revised_table1, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">fill =</span> rating)) <span class="sc">+</span></span>
+<span id="cb48-3"><a href="#cb48-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_bar</span>() <span class="sc">+</span></span>
+<span id="cb48-4"><a href="#cb48-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Count"</span>, <span class="at">fill =</span> <span class="st">"Rating"</span>,</span>
+<span id="cb48-5"><a href="#cb48-5" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"The Surge of Movie Rating Frequencies (1980-2016)"</span>) <span class="sc">+</span></span>
+<span id="cb48-6"><a href="#cb48-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb48-7"><a href="#cb48-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb48-8"><a href="#cb48-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb48-9"><a href="#cb48-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb48-10"><a href="#cb48-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb48-11"><a href="#cb48-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb48-12"><a href="#cb48-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">color =</span> <span class="st">"black"</span>),</span>
+<span id="cb48-13"><a href="#cb48-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">linewidth =</span> <span class="dv">1</span>),</span>
+<span id="cb48-14"><a href="#cb48-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb48-15"><a href="#cb48-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#FFE5B4"</span>, <span class="at">color =</span> <span class="cn">NA</span>)</span>
+<span id="cb48-16"><a href="#cb48-16" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Project-2_files/figure-html/unnamed-chunk-34-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb49"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb49-1"><a href="#cb49-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Line chart showing the proportion of each genre per year</span></span>
+<span id="cb49-2"><a href="#cb49-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Used ChatGPT assistance for theme and visual styling ideas</span></span>
+<span id="cb49-3"><a href="#cb49-3" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(revised_table4, <span class="fu">aes</span>(<span class="at">x =</span> year, <span class="at">y =</span> genre_prop, <span class="at">color =</span> genre)) <span class="sc">+</span></span>
+<span id="cb49-4"><a href="#cb49-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>() <span class="sc">+</span></span>
+<span id="cb49-5"><a href="#cb49-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(<span class="at">x =</span> <span class="st">"Year"</span>, <span class="at">y =</span> <span class="st">"Proportion"</span>, <span class="at">color =</span> <span class="st">"Genre"</span>,</span>
+<span id="cb49-6"><a href="#cb49-6" aria-hidden="true" tabindex="-1"></a>       <span class="at">title =</span> <span class="st">"The Shift in Movie Genre Proportion (1980-2016)"</span>) <span class="sc">+</span></span>
+<span id="cb49-7"><a href="#cb49-7" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_bw</span>() <span class="sc">+</span></span>
+<span id="cb49-8"><a href="#cb49-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(</span>
+<span id="cb49-9"><a href="#cb49-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.title =</span> <span class="fu">element_text</span>(<span class="at">hjust =</span> <span class="fl">0.5</span>, <span class="at">face =</span> <span class="st">"bold"</span>, <span class="at">size =</span> <span class="dv">12</span>),</span>
+<span id="cb49-10"><a href="#cb49-10" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb49-11"><a href="#cb49-11" aria-hidden="true" tabindex="-1"></a>    <span class="at">axis.text =</span> <span class="fu">element_text</span>(<span class="at">size =</span> <span class="dv">10</span>),</span>
+<span id="cb49-12"><a href="#cb49-12" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.title =</span> <span class="fu">element_text</span>(<span class="at">face =</span> <span class="st">"bold"</span>),</span>
+<span id="cb49-13"><a href="#cb49-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">legend.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"white"</span>, <span class="at">color =</span> <span class="st">"black"</span>),</span>
+<span id="cb49-14"><a href="#cb49-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.border =</span> <span class="fu">element_rect</span>(<span class="at">color =</span> <span class="st">"black"</span>, <span class="at">fill =</span> <span class="cn">NA</span>, <span class="at">linewidth =</span> <span class="dv">1</span>),</span>
+<span id="cb49-15"><a href="#cb49-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">panel.grid.minor =</span> <span class="fu">element_blank</span>(),</span>
+<span id="cb49-16"><a href="#cb49-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">plot.background =</span> <span class="fu">element_rect</span>(<span class="at">fill =</span> <span class="st">"#FFE5B4"</span>, <span class="at">color =</span> <span class="cn">NA</span>)</span>
+<span id="cb49-17"><a href="#cb49-17" aria-hidden="true" tabindex="-1"></a>  )</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="Project-2_files/figure-html/unnamed-chunk-35-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<section id="section-5" class="level3">
+<h3 class="anchored" data-anchor-id="section-5">—————————————————————————</h3>
+</section>
+</section>
+</section>
+<section id="sources" class="level1">
+<h1>Sources</h1>
+<ul>
+<li><a href="https://www.kaggle.com/datasets/danielgrijalvas/movies" class="uri">https://www.kaggle.com/datasets/danielgrijalvas/movies</a></li>
+<li><a href="https://www.kaggle.com/datasets/raidevesh05/movie-ratings-dataset" class="uri">https://www.kaggle.com/datasets/raidevesh05/movie-ratings-dataset</a></li>
+<li><a href="https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata" class="uri">https://www.kaggle.com/datasets/tmdb/tmdb-movie-metadata</a></li>
+</ul>
+<section id="section-6" class="level3">
+<h3 class="anchored" data-anchor-id="section-6">—————————————————————————</h3>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Always disconnect from the database when done to free up resources</span></span>
+<span id="cb50-2"><a href="#cb50-2" aria-hidden="true" tabindex="-1"></a>DBI<span class="sc">::</span><span class="fu">dbDisconnect</span>(con, <span class="at">shutdown =</span> <span class="cn">TRUE</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+      const outerScaffold = trigger.parentElement.cloneNode(true);
+      const codeEl = outerScaffold.querySelector('code');
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>

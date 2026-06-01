@@ -8,10 +8,14 @@ website:
     left:
       - href: index.qmd
         text: Home
-      - href: projects.html
-        text: Projects
-      - href: interests.html
+      - href: interests.qmd
         text: Interests
+      - text: Projects
+        menu:
+          - href: project2.qmd
+            text: SQL Project
+          - href: project3.qmd
+            text: Text Analysis Project
     right:
       - icon: github
         href: https://github.com/ZDoherty31
