@@ -1,6 +1,10 @@
 project:
   type: website
   output-dir: docs
+  resources:
+    - images/viz1.png
+    - images/viz2.png
+    - shiny_poster.pdf
 
 website:
   title: "Zoe Doherty"
