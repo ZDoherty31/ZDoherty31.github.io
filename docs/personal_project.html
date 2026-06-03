@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Zoe Doherty">
 
-<title>Zoe Doherty</title>
+<title>Lawrence University Athletics App – Zoe Doherty</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -73,7 +74,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed fullcontent quarto-light">
+<body class="nav-fixed quarto-light">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -91,7 +92,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -148,19 +149,45 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
-    
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#what-the-app-does" id="toc-what-the-app-does" class="nav-link" data-scroll-target="#what-the-app-does">What the App Does</a>
+  <ul class="collapse">
+  <li><a href="#user-side" id="toc-user-side" class="nav-link" data-scroll-target="#user-side">User Side</a></li>
+  <li><a href="#admin-side" id="toc-admin-side" class="nav-link" data-scroll-target="#admin-side">Admin Side</a></li>
+  </ul></li>
+  <li><a href="#how-i-built-it" id="toc-how-i-built-it" class="nav-link" data-scroll-target="#how-i-built-it">How I Built It</a>
+  <ul class="collapse">
+  <li><a href="#database-design" id="toc-database-design" class="nav-link" data-scroll-target="#database-design">Database Design</a></li>
+  <li><a href="#ios-app" id="toc-ios-app" class="nav-link" data-scroll-target="#ios-app">iOS App</a></li>
+  </ul></li>
+  <li><a href="#key-takeaways" id="toc-key-takeaways" class="nav-link" data-scroll-target="#key-takeaways">Key Takeaways</a></li>
+  <li><a href="#source-code" id="toc-source-code" class="nav-link" data-scroll-target="#source-code">Source Code</a></li>
+  </ul>
+</nav>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Zoe Doherty</h1>
+<h1 class="title">Lawrence University Athletics App</h1>
 </div>
 
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Zoe Doherty </p>
+          </div>
+  </div>
     
   
     
@@ -171,32 +198,60 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div style="text-align: center; padding: 2.5rem 0 1.5rem;">
-  <img src="images/profile.jpg" alt="Zoe Doherty" style="width: 220px; height: 220px; object-fit: cover; object-position: center top; border-radius: 50%; border: 4px solid #e8a838; box-shadow: 0 4px 20px rgba(0,0,0,0.12);">
-  <h1 style="margin: 1.2rem 0 0.2rem; font-size: 2.2rem;">Zoe Doherty</h1>
-  <p style="color: #555; font-size: 1.05rem; margin: 0;">Computer Science &amp; Data Science · Lawrence University '26</p>
-  <div style="margin-top: 1rem; display: flex; justify-content: center; gap: 12px; flex-wrap: wrap;">
-    <a href="https://github.com/ZDoherty31" target="_blank" style="display:inline-flex; align-items:center; gap:6px; padding: 7px 16px; border: 1.5px solid #1a3a5c; border-radius: 6px; color: #1a3a5c; font-size: 0.9rem; font-weight: 500; text-decoration: none;">
-      <i class="bi bi-github"></i> GitHub
-    </a>
-    <a href="https://www.linkedin.com/in/zoe-doherty31" target="_blank" style="display:inline-flex; align-items:center; gap:6px; padding: 7px 16px; border: 1.5px solid #1a3a5c; border-radius: 6px; color: #1a3a5c; font-size: 0.9rem; font-weight: 500; text-decoration: none;">
-      <i class="bi bi-linkedin"></i> LinkedIn
-    </a>
-  </div>
-</div>
-<hr>
-<section id="about-me" class="level2">
-<h2 class="anchored" data-anchor-id="about-me">About Me</h2>
-<p>Hi, I’m Zoe! I am a student-athlete at <strong>Lawrence University</strong> graduating in June 2026 with a degree in <strong>Computer Science</strong> and a minor in <strong>Data Science</strong> — with departmental honors. I’m originally from Algonquin, Illinois.</p>
-<p>I’m passionate about <strong>sports analytics</strong> and love exploring the intersection of data and real-world decision-making. Whether I’m building a relational database, running a sentiment analysis, or finding patterns in a dataset, I enjoy turning raw data into meaningful stories.</p>
-<p>Outside of academics, you’ll find me on the <strong>softball</strong> field, out on a <strong>hiking</strong> trail, spending time with family and friends, or <strong>drawing</strong>.</p>
+<section id="overview" class="level2">
+<h2 class="anchored" data-anchor-id="overview">Overview</h2>
+<p>The Lawrence University Athletics App is an iOS application I independently designed and built as my senior capstone project. The app serves as a comprehensive records and accolades platform for Lawrence University athletics, giving users the ability to browse historical sports records and individual athlete achievements across all varsity sports.</p>
+<p><strong>GitHub:</strong> <a href="https://github.com/ZDoherty31/CMSC698-Senior-Project">CMSC698-Senior-Project</a><br>
+<strong>Languages &amp; Tools:</strong> Swift, Python, Firebase, Xcode</p>
 <hr>
 </section>
-<section id="education" class="level2">
-<h2 class="anchored" data-anchor-id="education">Education</h2>
-<p><strong>Lawrence University</strong> · Appleton, WI<br>
-B.A. Computer Science, Minor in Data Science · <em>Class of June 2026</em><br>
-Graduating with Departmental Honors</p>
+<section id="what-the-app-does" class="level2">
+<h2 class="anchored" data-anchor-id="what-the-app-does">What the App Does</h2>
+<p>The app has two main sides — a <strong>user-facing side</strong> and an <strong>admin side</strong>.</p>
+<section id="user-side" class="level3">
+<h3 class="anchored" data-anchor-id="user-side">User Side</h3>
+<ul>
+<li>Browse Lawrence University athletic records organized by sport</li>
+<li>Search for individual players across any sport and view their personal accolades and any records they hold</li>
+<li>Explore historical achievements across all varsity programs including softball, basketball, soccer, tennis, hockey, volleyball, and more</li>
+</ul>
+</section>
+<section id="admin-side" class="level3">
+<h3 class="anchored" data-anchor-id="admin-side">Admin Side</h3>
+<ul>
+<li>Admins can add new records, categories, and sports directly through the app</li>
+<li>Any changes made by an admin automatically update the live database in real time, keeping the app current as new records are broken</li>
+</ul>
+<hr>
+</section>
+</section>
+<section id="how-i-built-it" class="level2">
+<h2 class="anchored" data-anchor-id="how-i-built-it">How I Built It</h2>
+<section id="database-design" class="level3">
+<h3 class="anchored" data-anchor-id="database-design">Database Design</h3>
+<p>I built the backend using <strong>Firebase Firestore</strong> as the database. To populate it, I:</p>
+<ol type="1">
+<li>Collected historical athletic records stored in older PDF files for each sport</li>
+<li>Wrote <strong>Python scripts</strong> to parse those PDFs and convert the data into structured JSON files</li>
+<li>Wrote additional Python scripts to upload the JSON data into Firebase, creating a clean, queryable database</li>
+</ol>
+</section>
+<section id="ios-app" class="level3">
+<h3 class="anchored" data-anchor-id="ios-app">iOS App</h3>
+<p>The frontend is built entirely in <strong>Swift</strong> using Xcode. I designed the full user interface and connected it to the Firebase backend so that data loads dynamically — meaning any records added through the admin side immediately appear for all users.</p>
+<hr>
+</section>
+</section>
+<section id="key-takeaways" class="level2">
+<h2 class="anchored" data-anchor-id="key-takeaways">Key Takeaways</h2>
+<p>This project combined several areas I care about — <strong>sports</strong>, <strong>data engineering</strong>, and <strong>software development</strong> — into one end-to-end application. I independently handled everything from data collection and parsing, to database design, to building and connecting the iOS frontend. It gave me hands-on experience with real-world app development challenges like parsing messy PDF data, designing a scalable database schema, and building an intuitive user interface.</p>
+<hr>
+</section>
+<section id="source-code" class="level2">
+<h2 class="anchored" data-anchor-id="source-code">Source Code</h2>
+<ul>
+<li><a href="https://github.com/ZDoherty31/CMSC698-Senior-Project">GitHub Repository</a></li>
+</ul>
 
 
 </section>

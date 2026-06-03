@@ -63,6 +63,48 @@
     "text": "Family & Friends\nAt the end of the day, the people around me matter most. I value the time I spend with family and close friends, and those relationships keep me grounded through the busy stretches of student-athlete life."
   },
   {
+    "objectID": "project4.html",
+    "href": "project4.html",
+    "title": "Project 4: numhelpr R Package",
+    "section": "",
+    "text": "numhelpr is an R package I built that provides simple helper functions for common number formatting and math tasks that can be tedious or unintuitive to do in base R. The package is installable directly from GitHub and includes three functions and a built-in practice dataset.\nYou can view the full package documentation at adc-405-s26.github.io/numhelpr and the source code at github.com/ADC-405-S26/numhelpr."
+  },
+  {
+    "objectID": "project4.html#overview",
+    "href": "project4.html#overview",
+    "title": "Project 4: numhelpr R Package",
+    "section": "",
+    "text": "numhelpr is an R package I built that provides simple helper functions for common number formatting and math tasks that can be tedious or unintuitive to do in base R. The package is installable directly from GitHub and includes three functions and a built-in practice dataset.\nYou can view the full package documentation at adc-405-s26.github.io/numhelpr and the source code at github.com/ADC-405-S26/numhelpr."
+  },
+  {
+    "objectID": "project4.html#installation",
+    "href": "project4.html#installation",
+    "title": "Project 4: numhelpr R Package",
+    "section": "Installation",
+    "text": "Installation\n\n# Install the development version from GitHub\nremotes::install_github(\"ADC-405-S26/numhelpr\")"
+  },
+  {
+    "objectID": "project4.html#functions",
+    "href": "project4.html#functions",
+    "title": "Project 4: numhelpr R Package",
+    "section": "Functions",
+    "text": "Functions\n\npercent()\nConverts a decimal value into a formatted percentage string — something that is surprisingly annoying to do cleanly in base R.\n\nlibrary(numhelpr)\n\n# Single value\npercent(0.753)\n\n# Works on vectors too\npercent(c(0.1, 0.25, 0.873))\n\n\n\n\npercent_change()\nCalculates the percentage change between two values. Useful for quickly computing growth rates or differences without writing the formula manually every time.\n\n# Single pair of values\npercent_change(10, 12.5)\n\n# Works on vectors too\npercent_change(c(10, 25, 5), c(12.5, 22, 5.75))\n\n\n\n\nclamp()\nRestricts numeric values to a specified range. Useful when you need to cap or floor values in a dataset without writing custom logic.\n\nclamp(c(1, 5, 10, 15, 20), lower = 5, upper = 15)"
+  },
+  {
+    "objectID": "project4.html#data",
+    "href": "project4.html#data",
+    "title": "Project 4: numhelpr R Package",
+    "section": "Data",
+    "text": "Data\nThe package includes a built-in dataset sales_data that can be used to practice the functions in a realistic context.\n\nsales_data"
+  },
+  {
+    "objectID": "project4.html#sources",
+    "href": "project4.html#sources",
+    "title": "Project 4: numhelpr R Package",
+    "section": "Sources",
+    "text": "Sources\n\nPackage Documentation\nGitHub Repository"
+  },
+  {
     "objectID": "project5.html",
     "href": "project5.html",
     "title": "Project 5: Six Years of Shiny in Research",
@@ -119,46 +161,46 @@
     "text": "References\n\nKasprzak, et al., “Six Years of Shiny in Research - Collaborative Development of Web Tools in R”, The R Journal, 2021"
   },
   {
-    "objectID": "project4.html",
-    "href": "project4.html",
-    "title": "Project 4: numhelpr R Package",
+    "objectID": "personal_project.html",
+    "href": "personal_project.html",
+    "title": "Lawrence University Athletics App",
     "section": "",
-    "text": "numhelpr is an R package I built that provides simple helper functions for common number formatting and math tasks that can be tedious or unintuitive to do in base R. The package is installable directly from GitHub and includes three functions and a built-in practice dataset.\nYou can view the full package documentation at adc-405-s26.github.io/numhelpr and the source code at github.com/ADC-405-S26/numhelpr."
+    "text": "The Lawrence University Athletics App is an iOS application I independently designed and built as my senior capstone project. The app serves as a comprehensive records and accolades platform for Lawrence University athletics, giving users the ability to browse historical sports records and individual athlete achievements across all varsity sports.\nGitHub: CMSC698-Senior-Project\nLanguages & Tools: Swift, Python, Firebase, Xcode"
   },
   {
-    "objectID": "project4.html#overview",
-    "href": "project4.html#overview",
-    "title": "Project 4: numhelpr R Package",
+    "objectID": "personal_project.html#overview",
+    "href": "personal_project.html#overview",
+    "title": "Lawrence University Athletics App",
     "section": "",
-    "text": "numhelpr is an R package I built that provides simple helper functions for common number formatting and math tasks that can be tedious or unintuitive to do in base R. The package is installable directly from GitHub and includes three functions and a built-in practice dataset.\nYou can view the full package documentation at adc-405-s26.github.io/numhelpr and the source code at github.com/ADC-405-S26/numhelpr."
+    "text": "The Lawrence University Athletics App is an iOS application I independently designed and built as my senior capstone project. The app serves as a comprehensive records and accolades platform for Lawrence University athletics, giving users the ability to browse historical sports records and individual athlete achievements across all varsity sports.\nGitHub: CMSC698-Senior-Project\nLanguages & Tools: Swift, Python, Firebase, Xcode"
   },
   {
-    "objectID": "project4.html#installation",
-    "href": "project4.html#installation",
-    "title": "Project 4: numhelpr R Package",
-    "section": "Installation",
-    "text": "Installation\n\n# Install the development version from GitHub\nremotes::install_github(\"ADC-405-S26/numhelpr\")"
+    "objectID": "personal_project.html#what-the-app-does",
+    "href": "personal_project.html#what-the-app-does",
+    "title": "Lawrence University Athletics App",
+    "section": "What the App Does",
+    "text": "What the App Does\nThe app has two main sides — a user-facing side and an admin side.\n\nUser Side\n\nBrowse Lawrence University athletic records organized by sport\nSearch for individual players across any sport and view their personal accolades and any records they hold\nExplore historical achievements across all varsity programs including softball, basketball, soccer, tennis, hockey, volleyball, and more\n\n\n\nAdmin Side\n\nAdmins can add new records, categories, and sports directly through the app\nAny changes made by an admin automatically update the live database in real time, keeping the app current as new records are broken"
   },
   {
-    "objectID": "project4.html#functions",
-    "href": "project4.html#functions",
-    "title": "Project 4: numhelpr R Package",
-    "section": "Functions",
-    "text": "Functions\n\npercent()\nConverts a decimal value into a formatted percentage string — something that is surprisingly annoying to do cleanly in base R.\n\nlibrary(numhelpr)\n\n# Single value\npercent(0.753)\n\n# Works on vectors too\npercent(c(0.1, 0.25, 0.873))\n\n\n\n\npercent_change()\nCalculates the percentage change between two values. Useful for quickly computing growth rates or differences without writing the formula manually every time.\n\n# Single pair of values\npercent_change(10, 12.5)\n\n# Works on vectors too\npercent_change(c(10, 25, 5), c(12.5, 22, 5.75))\n\n\n\n\nclamp()\nRestricts numeric values to a specified range. Useful when you need to cap or floor values in a dataset without writing custom logic.\n\nclamp(c(1, 5, 10, 15, 20), lower = 5, upper = 15)"
+    "objectID": "personal_project.html#how-i-built-it",
+    "href": "personal_project.html#how-i-built-it",
+    "title": "Lawrence University Athletics App",
+    "section": "How I Built It",
+    "text": "How I Built It\n\nDatabase Design\nI built the backend using Firebase Firestore as the database. To populate it, I:\n\nCollected historical athletic records stored in older PDF files for each sport\nWrote Python scripts to parse those PDFs and convert the data into structured JSON files\nWrote additional Python scripts to upload the JSON data into Firebase, creating a clean, queryable database\n\n\n\niOS App\nThe frontend is built entirely in Swift using Xcode. I designed the full user interface and connected it to the Firebase backend so that data loads dynamically — meaning any records added through the admin side immediately appear for all users."
   },
   {
-    "objectID": "project4.html#data",
-    "href": "project4.html#data",
-    "title": "Project 4: numhelpr R Package",
-    "section": "Data",
-    "text": "Data\nThe package includes a built-in dataset sales_data that can be used to practice the functions in a realistic context.\n\nsales_data"
+    "objectID": "personal_project.html#key-takeaways",
+    "href": "personal_project.html#key-takeaways",
+    "title": "Lawrence University Athletics App",
+    "section": "Key Takeaways",
+    "text": "Key Takeaways\nThis project combined several areas I care about — sports, data engineering, and software development — into one end-to-end application. I independently handled everything from data collection and parsing, to database design, to building and connecting the iOS frontend. It gave me hands-on experience with real-world app development challenges like parsing messy PDF data, designing a scalable database schema, and building an intuitive user interface."
   },
   {
-    "objectID": "project4.html#sources",
-    "href": "project4.html#sources",
-    "title": "Project 4: numhelpr R Package",
-    "section": "Sources",
-    "text": "Sources\n\nPackage Documentation\nGitHub Repository"
+    "objectID": "personal_project.html#source-code",
+    "href": "personal_project.html#source-code",
+    "title": "Lawrence University Athletics App",
+    "section": "Source Code",
+    "text": "Source Code\n\nGitHub Repository"
   },
   {
     "objectID": "project2.html#query-1---top-10-most-profitable-movies",

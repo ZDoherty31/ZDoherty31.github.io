@@ -24,6 +24,8 @@ website:
             text: R Package
           - href: project5.html
             text: Shiny Research Paper & Poster
+          - href: personal_project.html
+            text: Lawrence Athletics Records App
     right:
       - icon: github
         href: https://github.com/ZDoherty31
