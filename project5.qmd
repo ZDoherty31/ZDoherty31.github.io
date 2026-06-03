@@ -41,9 +41,7 @@ A literature search was conducted using Web Scholar, Scopus, Google Scholar, and
 
 ## Poster
 
-![Six Years of Shiny in Research Poster](shiny_poster.png)
-
-------------------------------------------------------------------------
+[Click here to view the full poster (PDF)](shiny_poster.pdf)
 
 ## Conclusion
 
