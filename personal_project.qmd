@@ -6,7 +6,7 @@ author: "Zoe Doherty"
 
 ## Overview
 
-The Lawrence University Athletics App is an iOS application I independently designed and built as my senior capstone project. The app serves as a comprehensive records and accolades platform for Lawrence University athletics, giving users the ability to browse historical sports records and individual athlete achievements across all varsity sports.
+The Record Curator(A Lawrence University Athletic Records App) is an iOS application I independently designed and built as my senior capstone project. The app serves as a comprehensive records and accolades platform for Lawrence University athletics, giving users the ability to browse historical sports records and individual athlete achievements across all sports.
 
 **GitHub:** [CMSC698-Senior-Project](https://github.com/ZDoherty31/CMSC698-Senior-Project)\
 **Languages & Tools:** Swift, Python, Firebase, Xcode
@@ -21,7 +21,7 @@ The app has two main sides — a **user-facing side** and an **admin side**.
 
 -   Browse Lawrence University athletic records organized by sport
 -   Search for individual players across any sport and view their personal accolades and any records they hold
--   Explore historical achievements across all varsity programs including softball, basketball, soccer, tennis, hockey, volleyball, and more
+-   Explore historical achievements across all programs including softball, basketball, soccer, tennis, hockey, volleyball, and more
 
 ### Admin Side
 

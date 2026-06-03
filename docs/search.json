@@ -18,7 +18,7 @@
     "href": "index.html#about-me",
     "title": "Zoe Doherty",
     "section": "About Me",
-    "text": "About Me\nHi, I’m Zoe! I am a student-athlete at Lawrence University graduating in June 2026 with a degree in Computer Science and a minor in Data Science — with departmental honors. I’m originally from Algonquin, Illinois.\nI’m passionate about sports analytics and love exploring the intersection of data and real-world decision-making. Whether I’m building a relational database, running a sentiment analysis, or finding patterns in a dataset, I enjoy turning raw data into meaningful stories.\nOutside of academics, you’ll find me on the softball field, out on a hiking trail, spending time with family and friends, or drawing."
+    "text": "About Me\nHi, I’m Zoe! I am a student-athlete at Lawrence University graduating in June 2026 with a degree in Computer Science and a minor in Data Science — with departmental honors. I’m originally from Algonquin, Illinois.\nI’m passionate about sports analytics and love exploring the intersection of data and real-world decision-making. Whether I’m building an iOS app that brings athletic records to life, designing a database from scratch, or uncovering patterns hidden in thousands of movie reviews, I enjoy creating things that make complex information accessible and useful.\nOutside of academics, you’ll find me on the softball field, out on a hiking trail, spending time with family and friends, or drawing."
   },
   {
     "objectID": "index.html#education",
@@ -53,7 +53,7 @@
     "href": "interests.html#drawing-art",
     "title": "Interests",
     "section": "Drawing & Art",
-    "text": "Drawing & Art\nDrawing is a creative outlet that balances out the technical side of my life. I find that creative thinking in art and creative thinking in data science are not all that different — both are about finding a way to communicate something clearly and compellingly."
+    "text": "Drawing & Art\nDrawing is a creative outlet that balances out the technical side of my life. I find that creative thinking in art and creative thinking in computer science or data science are not all that different — both are about finding a way to communicate something clearly and compellingly."
   },
   {
     "objectID": "interests.html#family-friends",
@@ -109,21 +109,21 @@
     "href": "project5.html",
     "title": "Project 5: Six Years of Shiny in Research",
     "section": "",
-    "text": "This project is a research paper and academic poster exploring how the R Shiny web application framework has been used in peer-reviewed research over its six years of existence. Using an algorithmic literature search, we analyzed the role Shiny has played in enabling cross-disciplinary collaboration and accessible data science.\nCollaborators: Owen Horton & Zoe Doherty\nGitHub: Project_5_PaperPoster_Team_9"
+    "text": "In this project my partner and I read a research paper and created an academic poster exploring how the R Shiny web application framework has been used in peer-reviewed research over its six years of existence. Using an algorithmic literature search, they analyzed the role Shiny has played in enabling cross-disciplinary collaboration and accessible data science.\nCollaborators: Owen Horton & Zoe Doherty\nGitHub: Project_5_PaperPoster_Team_9"
   },
   {
     "objectID": "project5.html#overview",
     "href": "project5.html#overview",
     "title": "Project 5: Six Years of Shiny in Research",
     "section": "",
-    "text": "This project is a research paper and academic poster exploring how the R Shiny web application framework has been used in peer-reviewed research over its six years of existence. Using an algorithmic literature search, we analyzed the role Shiny has played in enabling cross-disciplinary collaboration and accessible data science.\nCollaborators: Owen Horton & Zoe Doherty\nGitHub: Project_5_PaperPoster_Team_9"
+    "text": "In this project my partner and I read a research paper and created an academic poster exploring how the R Shiny web application framework has been used in peer-reviewed research over its six years of existence. Using an algorithmic literature search, they analyzed the role Shiny has played in enabling cross-disciplinary collaboration and accessible data science.\nCollaborators: Owen Horton & Zoe Doherty\nGitHub: Project_5_PaperPoster_Team_9"
   },
   {
     "objectID": "project5.html#introduction",
     "href": "project5.html#introduction",
     "title": "Project 5: Six Years of Shiny in Research",
     "section": "Introduction",
-    "text": "Introduction\nShiny simplifies the use of complex methodologies for researchers of different specialties, and its free and simple implementation has sparked popularity among collaborators in a variety of fields. However, Shiny users without a solid background in data analytics may cause irreproducibility in peer-reviewed literature. So to what extent has Shiny provided knowledge during its six years of existence? We conducted an algorithmic analysis on Shiny-related academic literature to answer that question."
+    "text": "Introduction\nShiny simplifies the use of complex methodologies for researchers of different specialties, and its free and simple implementation has sparked popularity among collaborators in a variety of fields. However, Shiny users without a solid background in data analytics may cause irreproducibility in peer-reviewed literature. So to what extent has Shiny provided knowledge during its six years of existence? They conducted an algorithmic analysis on Shiny-related academic literature to answer that question."
   },
   {
     "objectID": "project5.html#methods",
@@ -165,21 +165,21 @@
     "href": "personal_project.html",
     "title": "Lawrence University Athletics App",
     "section": "",
-    "text": "The Lawrence University Athletics App is an iOS application I independently designed and built as my senior capstone project. The app serves as a comprehensive records and accolades platform for Lawrence University athletics, giving users the ability to browse historical sports records and individual athlete achievements across all varsity sports.\nGitHub: CMSC698-Senior-Project\nLanguages & Tools: Swift, Python, Firebase, Xcode"
+    "text": "The Record Curator(A Lawrence University Athletic Records App) is an iOS application I independently designed and built as my senior capstone project. The app serves as a comprehensive records and accolades platform for Lawrence University athletics, giving users the ability to browse historical sports records and individual athlete achievements across all sports.\nGitHub: CMSC698-Senior-Project\nLanguages & Tools: Swift, Python, Firebase, Xcode"
   },
   {
     "objectID": "personal_project.html#overview",
     "href": "personal_project.html#overview",
     "title": "Lawrence University Athletics App",
     "section": "",
-    "text": "The Lawrence University Athletics App is an iOS application I independently designed and built as my senior capstone project. The app serves as a comprehensive records and accolades platform for Lawrence University athletics, giving users the ability to browse historical sports records and individual athlete achievements across all varsity sports.\nGitHub: CMSC698-Senior-Project\nLanguages & Tools: Swift, Python, Firebase, Xcode"
+    "text": "The Record Curator(A Lawrence University Athletic Records App) is an iOS application I independently designed and built as my senior capstone project. The app serves as a comprehensive records and accolades platform for Lawrence University athletics, giving users the ability to browse historical sports records and individual athlete achievements across all sports.\nGitHub: CMSC698-Senior-Project\nLanguages & Tools: Swift, Python, Firebase, Xcode"
   },
   {
     "objectID": "personal_project.html#what-the-app-does",
     "href": "personal_project.html#what-the-app-does",
     "title": "Lawrence University Athletics App",
     "section": "What the App Does",
-    "text": "What the App Does\nThe app has two main sides — a user-facing side and an admin side.\n\nUser Side\n\nBrowse Lawrence University athletic records organized by sport\nSearch for individual players across any sport and view their personal accolades and any records they hold\nExplore historical achievements across all varsity programs including softball, basketball, soccer, tennis, hockey, volleyball, and more\n\n\n\nAdmin Side\n\nAdmins can add new records, categories, and sports directly through the app\nAny changes made by an admin automatically update the live database in real time, keeping the app current as new records are broken"
+    "text": "What the App Does\nThe app has two main sides — a user-facing side and an admin side.\n\nUser Side\n\nBrowse Lawrence University athletic records organized by sport\nSearch for individual players across any sport and view their personal accolades and any records they hold\nExplore historical achievements across all programs including softball, basketball, soccer, tennis, hockey, volleyball, and more\n\n\n\nAdmin Side\n\nAdmins can add new records, categories, and sports directly through the app\nAny changes made by an admin automatically update the live database in real time, keeping the app current as new records are broken"
   },
   {
     "objectID": "personal_project.html#how-i-built-it",

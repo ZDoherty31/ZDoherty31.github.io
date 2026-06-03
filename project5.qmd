@@ -6,7 +6,7 @@ author: "Owen Horton & Zoe Doherty"
 
 ## Overview
 
-This project is a research paper and academic poster exploring how the R Shiny web application framework has been used in peer-reviewed research over its six years of existence. Using an algorithmic literature search, we analyzed the role Shiny has played in enabling cross-disciplinary collaboration and accessible data science.
+In this project my partner and I read a research paper and created an academic poster exploring how the R Shiny web application framework has been used in peer-reviewed research over its six years of existence. Using an algorithmic literature search, they analyzed the role Shiny has played in enabling cross-disciplinary collaboration and accessible data science.
 
 **Collaborators:** Owen Horton & Zoe Doherty\
 **GitHub:** [Project_5_PaperPoster_Team_9](https://github.com/ADC-405-S26/Project_5_PaperPoster_Team_9)
@@ -15,7 +15,7 @@ This project is a research paper and academic poster exploring how the R Shiny w
 
 ## Introduction
 
-Shiny simplifies the use of complex methodologies for researchers of different specialties, and its free and simple implementation has sparked popularity among collaborators in a variety of fields. However, Shiny users without a solid background in data analytics may cause irreproducibility in peer-reviewed literature. So to what extent has Shiny provided knowledge during its six years of existence? We conducted an algorithmic analysis on Shiny-related academic literature to answer that question.
+Shiny simplifies the use of complex methodologies for researchers of different specialties, and its free and simple implementation has sparked popularity among collaborators in a variety of fields. However, Shiny users without a solid background in data analytics may cause irreproducibility in peer-reviewed literature. So to what extent has Shiny provided knowledge during its six years of existence? They conducted an algorithmic analysis on Shiny-related academic literature to answer that question.
 
 ------------------------------------------------------------------------
 
