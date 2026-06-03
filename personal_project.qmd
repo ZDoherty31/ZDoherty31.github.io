@@ -37,8 +37,8 @@ The app has two main sides — a **user-facing side** and an **admin side**.
 I built the backend using **Firebase Firestore** as the database. To populate it, I:
 
 1.  Collected historical athletic records stored in older PDF files for each sport
-2.  Wrote **Python scripts** to parse those PDFs and convert the data into structured JSON files
-3.  Wrote additional Python scripts to upload the JSON data into Firebase, creating a clean, queryable database
+2.  Converted the PDFs to JSON files
+3.  Wrote Python scripts to upload the JSON data into Firebase, creating a clean, queryable database
 
 ### iOS App
 

@@ -186,7 +186,7 @@
     "href": "personal_project.html#how-i-built-it",
     "title": "Lawrence University Athletics App",
     "section": "How I Built It",
-    "text": "How I Built It\n\nDatabase Design\nI built the backend using Firebase Firestore as the database. To populate it, I:\n\nCollected historical athletic records stored in older PDF files for each sport\nWrote Python scripts to parse those PDFs and convert the data into structured JSON files\nWrote additional Python scripts to upload the JSON data into Firebase, creating a clean, queryable database\n\n\n\niOS App\nThe frontend is built entirely in Swift using Xcode. I designed the full user interface and connected it to the Firebase backend so that data loads dynamically — meaning any records added through the admin side immediately appear for all users."
+    "text": "How I Built It\n\nDatabase Design\nI built the backend using Firebase Firestore as the database. To populate it, I:\n\nCollected historical athletic records stored in older PDF files for each sport\nConverted the PDFs to JSON files\nWrote Python scripts to upload the JSON data into Firebase, creating a clean, queryable database\n\n\n\niOS App\nThe frontend is built entirely in Swift using Xcode. I designed the full user interface and connected it to the Firebase backend so that data loads dynamically — meaning any records added through the admin side immediately appear for all users."
   },
   {
     "objectID": "personal_project.html#key-takeaways",
