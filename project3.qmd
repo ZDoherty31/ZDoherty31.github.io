@@ -261,7 +261,7 @@ ggplot(rt_sentiment, aes(x = mean_sentiment, y = primary_genre, fill = after_sta
   )
 ```
 
-![How Positive Is the Language Critics Use by Genre?](viz1.png)
+![How Positive Is the Language Critics Use by Genre?](../images/viz1.png)
 
 # Interpretation
 
@@ -315,7 +315,7 @@ ggplot(final_dataset, aes(x = year, y = avg_sentiment, color = rating)) +
   )
 ```
 
-![How do Average Sentiments by Rating change over Time?](viz2.png)
+![How do Average Sentiments by Rating change over Time?](../images/viz2.png)
 
 # Interpretation
 
