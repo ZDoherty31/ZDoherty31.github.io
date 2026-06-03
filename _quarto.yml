@@ -18,6 +18,8 @@ website:
             text: Text Analysis Project
           - href: project4.html
             text: R Package
+          - href: project5.html
+            text: Shiny Research Paper & Poster
     right:
       - icon: github
         href: https://github.com/ZDoherty31

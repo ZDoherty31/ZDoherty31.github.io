@@ -63,6 +63,62 @@
     "text": "Family & Friends\nAt the end of the day, the people around me matter most. I value the time I spend with family and close friends, and those relationships keep me grounded through the busy stretches of student-athlete life."
   },
   {
+    "objectID": "project5.html",
+    "href": "project5.html",
+    "title": "Project 5: Six Years of Shiny in Research",
+    "section": "",
+    "text": "This project is a research paper and academic poster exploring how the R Shiny web application framework has been used in peer-reviewed research over its six years of existence. Using an algorithmic literature search, we analyzed the role Shiny has played in enabling cross-disciplinary collaboration and accessible data science.\nCollaborators: Owen Horton & Zoe Doherty\nGitHub: Project_5_PaperPoster_Team_9"
+  },
+  {
+    "objectID": "project5.html#overview",
+    "href": "project5.html#overview",
+    "title": "Project 5: Six Years of Shiny in Research",
+    "section": "",
+    "text": "This project is a research paper and academic poster exploring how the R Shiny web application framework has been used in peer-reviewed research over its six years of existence. Using an algorithmic literature search, we analyzed the role Shiny has played in enabling cross-disciplinary collaboration and accessible data science.\nCollaborators: Owen Horton & Zoe Doherty\nGitHub: Project_5_PaperPoster_Team_9"
+  },
+  {
+    "objectID": "project5.html#introduction",
+    "href": "project5.html#introduction",
+    "title": "Project 5: Six Years of Shiny in Research",
+    "section": "Introduction",
+    "text": "Introduction\nShiny simplifies the use of complex methodologies for researchers of different specialties, and its free and simple implementation has sparked popularity among collaborators in a variety of fields. However, Shiny users without a solid background in data analytics may cause irreproducibility in peer-reviewed literature. So to what extent has Shiny provided knowledge during its six years of existence? We conducted an algorithmic analysis on Shiny-related academic literature to answer that question."
+  },
+  {
+    "objectID": "project5.html#methods",
+    "href": "project5.html#methods",
+    "title": "Project 5: Six Years of Shiny in Research",
+    "section": "Methods",
+    "text": "Methods\nA literature search was conducted using Web Scholar, Scopus, Google Scholar, and University of Adelaide (UofA), with primary keywords “Shiny Web Application” or “Shiny Web App”. The purpose was to isolate a subset of academic literature capable of offering a substantive and holistic reflection of Shiny’s role in research.\n\nPulled from at least one of four search tools, each with ~127,000 papers from 2012–2018\nPapers scored by keyword match, academic significance, type of search, and publication date\nTop 600 highest-scoring papers selected for thorough reading\nAmong selected papers: 445 original applications introduced, 373 unique R packages utilized, 229 unique peer-reviewed journals represented"
+  },
+  {
+    "objectID": "project5.html#key-findings",
+    "href": "project5.html#key-findings",
+    "title": "Project 5: Six Years of Shiny in Research",
+    "section": "Key Findings",
+    "text": "Key Findings\n\nResults spanned 229 unique peer-reviewed journals across diverse disciplines, with Bioinformatics publishing the largest share\nAreas lower in data analysis expertise (e.g. Biological Sciences, Education) showed notably high Shiny usage\nShiny is primarily used as a visualization and dissemination tool, with the most substantive discussions appearing in earlier papers\nFour major themes emerged: Complexity barrier, Cross-collaboration, Flexibility, and Reproducibility"
+  },
+  {
+    "objectID": "project5.html#poster",
+    "href": "project5.html#poster",
+    "title": "Project 5: Six Years of Shiny in Research",
+    "section": "Poster",
+    "text": "Poster\n\n\n\nSix Years of Shiny in Research Poster"
+  },
+  {
+    "objectID": "project5.html#conclusion",
+    "href": "project5.html#conclusion",
+    "title": "Project 5: Six Years of Shiny in Research",
+    "section": "Conclusion",
+    "text": "Conclusion\nShiny is not a silver bullet, but it enables specialized applications created cheaply and easily for any level of end user. Its greatest contribution is enabling cross-disciplinary collaboration, allowing field researchers, clinicians, and educators to engage with cutting-edge methods without programming expertise. Data security and architectural limitations remain concerns for future development."
+  },
+  {
+    "objectID": "project5.html#references",
+    "href": "project5.html#references",
+    "title": "Project 5: Six Years of Shiny in Research",
+    "section": "References",
+    "text": "References\n\nKasprzak, et al., “Six Years of Shiny in Research - Collaborative Development of Web Tools in R”, The R Journal, 2021"
+  },
+  {
     "objectID": "project4.html",
     "href": "project4.html",
     "title": "Project 4: numhelpr R Package",
